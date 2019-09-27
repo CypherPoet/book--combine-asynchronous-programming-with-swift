@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "BookSource">
+      <FileRef
+         location = "group:private/BookSource/Combine_Asynchronous_Programming_with_Swift_v0.2.0/02-publishers-and-subjects/starter/Combine.playground">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:/Users/briansipple/lxda/swift/Combine/book--combine-asynchronous-programming-with-swift/02-publishers-and-subscribers/Playgrounds/Combine.playground">
+   </FileRef>
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
+</Workspace>
