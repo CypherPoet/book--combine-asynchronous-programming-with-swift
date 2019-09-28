@@ -34,6 +34,7 @@ demo(describing: "Publishers and Subscribers") {
     }
     
     notificationCenter.post(name: .myNotification, object: nil)
+    subscription.cancel()
 }
 
 
