@@ -7,5 +7,9 @@ _Projects, playgrounds, and other materials made while following along with the 
 
 - [Chapter 2: Queues & Threads](./02-publishers-and-subscribers)
     - Creating publishers and subscribing to them.
+    - Subjects
+    - Dynamically Adjusting Demand
+    - Type Erasure
+    - **🥅 Challenge:** Create a Blackjack Card Dealer
     
 

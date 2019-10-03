@@ -1,5 +1,8 @@
-import UIKit
+//: [Previous](@previous)
+
 import Combine
+import PlaygroundSupport
+import UIKit
 
 
 extension Notification.Name {
@@ -7,8 +10,6 @@ extension Notification.Name {
 }
 
 let notificationCenter = NotificationCenter.default
-
-var subscriptions = Set<AnyCancellable>()
 
 
 demo(describing: "Traditional Notification Center Observers") {
@@ -25,7 +26,7 @@ demo(describing: "Traditional Notification Center Observers") {
 }
 
 
-demo(describing: "Publishers and Subscribers") {
+demo(describing: "Subscribing to a Notification Center Publisher") {
     /// Creates a Publisher that emits an event when the notification center broadcasts a notification.
     let publisher = notificationCenter.publisher(for: .myNotification, object: nil)
     
@@ -76,3 +77,51 @@ demo(describing: "Subscribing with `assign(to:on:)`") {
     newName.assign(to: \.name, on: player)
     namesList.publisher.assign(to: \.name, on: player)
 }
+
+
+
+demo(describing: "Custom Subscriber") {
+    let publisher = (1 ... 6).publisher
+    let subscriber = IntSubscriber()
+    
+    publisher.subscribe(subscriber)
+}
+
+
+var subscriptions: Set<AnyCancellable> = []
+
+demo(describing: "The \"Future\" Publisher") {
+    
+    func increment(
+        _ integer: Int,
+        afterDelay delay: TimeInterval,
+        on queue: DispatchQueue = .global()
+    ) -> Future<Int, Never> {
+        Future<Int, Never> { promise in
+            queue.asyncAfter(deadline: .now() + delay) {
+                promise(.success(integer + 1))
+            }
+        }
+    }
+    
+    let numbers = [1, 1, 2, 3, 5]
+    
+    for number in numbers {
+        let future = increment(number, afterDelay: 1)
+        
+        future
+            .sink(
+                receiveCompletion: { completion in
+                    print("Increment \(number) -- received completion: \(completion)")
+                },
+                receiveValue: { value in
+                    print("Increment \(number) -- received value: \(value)")
+                }
+            )
+            .store(in: &subscriptions)
+    }
+}
+
+
+
+//: [Next](@next)

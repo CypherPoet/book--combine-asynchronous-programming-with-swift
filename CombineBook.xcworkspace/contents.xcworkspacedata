@@ -3,14 +3,32 @@
    version = "1.0">
    <Group
       location = "container:"
-      name = "BookSource">
+      name = "MyFiles">
       <FileRef
-         location = "group:private/BookSource/Combine_Asynchronous_Programming_with_Swift_v0.2.0/02-publishers-and-subjects/starter/Combine.playground">
+         location = "group:/Users/briansipple/lxda/swift/Combine/book--combine-asynchronous-programming-with-swift/02-publishers-and-subscribers/Playgrounds/Combine.playground">
       </FileRef>
    </Group>
-   <FileRef
-      location = "group:/Users/briansipple/lxda/swift/Combine/book--combine-asynchronous-programming-with-swift/02-publishers-and-subscribers/Playgrounds/Combine.playground">
-   </FileRef>
+   <Group
+      location = "container:"
+      name = "BookSource">
+      <Group
+         location = "container:"
+         name = "Chapter 02">
+         <Group
+            location = "container:"
+            name = "Challenge">
+            <FileRef
+               location = "group:private/BookSource/02-publishers-and-subjects/challenge/Final.playground">
+            </FileRef>
+            <FileRef
+               location = "group:private/BookSource/02-publishers-and-subjects/challenge/Starter.playground">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:private/BookSource/02-publishers-and-subjects/challenge/Starter.playground">
+         </FileRef>
+      </Group>
+   </Group>
    <FileRef
       location = "group:README.md">
    </FileRef>

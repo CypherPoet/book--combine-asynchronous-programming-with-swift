@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='5.0' target-platform='ios' display-mode='rendered'>
-    <timeline fileName='timeline.xctimeline'/>
+<playground version='6.0' target-platform='ios' display-mode='raw'>
+    <pages>
+        <page name='02 - Publishers &amp; Subscribers Intro'/>
+        <page name='02 - Subjects'/>
+        <page name='02 - Dynamically Adjusting Demand'/>
+        <page name='02 - Type Erasure'/>
+        <page name='02 - Challenge'/>
+    </pages>
 </playground>
