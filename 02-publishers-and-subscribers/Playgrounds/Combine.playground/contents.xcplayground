@@ -6,5 +6,6 @@
         <page name='02 - Dynamically Adjusting Demand'/>
         <page name='02 - Type Erasure'/>
         <page name='02 - Challenge'/>
+        <page name='03 - Collecting Values'/>
     </pages>
 </playground>

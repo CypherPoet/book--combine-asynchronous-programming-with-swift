@@ -13,6 +13,13 @@
       name = "BookSource">
       <Group
          location = "container:"
+         name = "Chapter 03">
+         <FileRef
+            location = "group:private/BookSource/03-transforming-operators/Final.playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
          name = "Chapter 02">
          <Group
             location = "container:"
