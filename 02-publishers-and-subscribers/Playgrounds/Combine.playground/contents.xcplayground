@@ -10,5 +10,6 @@
         <page name='03 - Mapping Values'/>
         <page name='03 - Mapping Keypaths'/>
         <page name='03 - TryMap'/>
+        <page name='03 - Flattening Publishers'/>
     </pages>
 </playground>
