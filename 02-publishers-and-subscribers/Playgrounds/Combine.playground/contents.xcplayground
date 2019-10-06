@@ -7,5 +7,8 @@
         <page name='02 - Type Erasure'/>
         <page name='02 - Challenge'/>
         <page name='03 - Collecting Values'/>
+        <page name='03 - Mapping Values'/>
+        <page name='03 - Mapping Keypaths'/>
+        <page name='03 - TryMap'/>
     </pages>
 </playground>
