@@ -11,5 +11,6 @@
         <page name='03 - Mapping Keypaths'/>
         <page name='03 - TryMap'/>
         <page name='03 - Flattening Publishers'/>
+        <page name='03 - Replacing Upstream Output'/>
     </pages>
 </playground>
