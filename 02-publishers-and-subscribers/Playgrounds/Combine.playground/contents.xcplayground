@@ -12,5 +12,7 @@
         <page name='03 - TryMap'/>
         <page name='03 - Flattening Publishers'/>
         <page name='03 - Replacing Upstream Output'/>
+        <page name='03 - Incrementally Transforming Output'/>
+        <page name='03 - Challenge'/>
     </pages>
 </playground>

@@ -31,6 +31,16 @@
       <Group
          location = "container:"
          name = "Chapter 03">
+         <Group
+            location = "group:private/BookSource/03-transforming-operators/challenge"
+            name = "challenge">
+            <FileRef
+               location = "group:Final.playground">
+            </FileRef>
+            <FileRef
+               location = "group:Starter.playground">
+            </FileRef>
+         </Group>
          <FileRef
             location = "group:private/BookSource/03-transforming-operators/Final.playground">
          </FileRef>
