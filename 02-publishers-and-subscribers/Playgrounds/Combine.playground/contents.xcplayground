@@ -15,5 +15,6 @@
         <page name='03 - Incrementally Transforming Output'/>
         <page name='03 - Challenge'/>
         <page name='04 - Filtering Operators Intro'/>
+        <page name='04 - Compacting and Ignoring'/>
     </pages>
 </playground>
