@@ -13,6 +13,26 @@
       name = "BookSource">
       <Group
          location = "container:"
+         name = "Chapter 04">
+         <Group
+            location = "group:private/BookSource/04-filtering-operators/challenge"
+            name = "challenge">
+            <FileRef
+               location = "group:Final.playground">
+            </FileRef>
+            <FileRef
+               location = "group:Starter.playground">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:private/BookSource/04-filtering-operators/Starter.playground">
+         </FileRef>
+         <FileRef
+            location = "group:private/BookSource/04-filtering-operators/Final.playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
          name = "Chapter 02">
          <Group
             location = "container:"
