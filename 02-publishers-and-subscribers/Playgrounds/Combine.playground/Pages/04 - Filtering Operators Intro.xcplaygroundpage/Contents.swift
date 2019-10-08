@@ -19,4 +19,16 @@ demo(describing: "The `filter` operator") {
 }
 
 
+
+demo(describing: "The `removeDuplicates` operator") {
+    let sentence = "Keep it it secret! Keep Keep it safe!"
+    
+    sentence
+        .components(separatedBy: " ")
+        .publisher
+        .removeDuplicates()
+        .sink { print("(sink) Received value: \($0)") }
+        .store(in: &subscriptions)
+}
+
 //: [Next](@next)
