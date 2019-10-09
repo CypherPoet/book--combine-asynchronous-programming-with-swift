@@ -17,5 +17,6 @@
         <page name='04 - Filtering Operators Intro'/>
         <page name='04 - Compacting and Ignoring'/>
         <page name='04 - Finding Values'/>
+        <page name='04 - Dropping Values'/>
     </pages>
 </playground>
