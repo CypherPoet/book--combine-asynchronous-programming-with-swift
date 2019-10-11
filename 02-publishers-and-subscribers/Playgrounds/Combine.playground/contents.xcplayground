@@ -19,5 +19,6 @@
         <page name='04 - Finding Values'/>
         <page name='04 - Dropping Values'/>
         <page name='04 - Limiting Values'/>
+        <page name='04- Challenge'/>
     </pages>
 </playground>
