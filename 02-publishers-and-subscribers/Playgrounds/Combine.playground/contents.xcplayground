@@ -18,5 +18,6 @@
         <page name='04 - Compacting and Ignoring'/>
         <page name='04 - Finding Values'/>
         <page name='04 - Dropping Values'/>
+        <page name='04 - Limiting Values'/>
     </pages>
 </playground>
