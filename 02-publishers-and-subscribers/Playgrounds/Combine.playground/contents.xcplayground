@@ -20,5 +20,6 @@
         <page name='04 - Dropping Values'/>
         <page name='04 - Limiting Values'/>
         <page name='04- Challenge'/>
+        <page name='05 - Prepending'/>
     </pages>
 </playground>
