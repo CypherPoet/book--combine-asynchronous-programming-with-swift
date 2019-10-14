@@ -21,5 +21,6 @@
         <page name='04 - Limiting Values'/>
         <page name='04- Challenge'/>
         <page name='05 - Prepending'/>
+        <page name='05- Appending'/>
     </pages>
 </playground>
