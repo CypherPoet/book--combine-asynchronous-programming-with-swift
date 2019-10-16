@@ -22,5 +22,9 @@
         <page name='04- Challenge'/>
         <page name='05 - Prepending'/>
         <page name='05- Appending'/>
+        <page name='05 - switchToLatest'/>
+        <page name='05 - Merge'/>
+        <page name='05- combineLatest'/>
+        <page name='05 - zip'/>
     </pages>
 </playground>
