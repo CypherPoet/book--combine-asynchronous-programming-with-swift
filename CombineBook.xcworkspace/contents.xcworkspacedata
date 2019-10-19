@@ -5,27 +5,26 @@
       location = "container:"
       name = "MyFiles">
       <FileRef
-         location = "group:/Users/briansipple/lxda/swift/Combine/book--combine-asynchronous-programming-with-swift/02-publishers-and-subscribers/Playgrounds/Combine.playground">
+         location = "group:/Users/briansipple/lxda/swift/Combine/book--combine-asynchronous-programming-with-swift/chapter-06-time-based-operators/Playgrounds/Chapter 6.playground">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/briansipple/lxda/swift/Combine/book--combine-asynchronous-programming-with-swift/02-publishers-and-subscribers/Playgrounds/Chapters 2-5.playground">
       </FileRef>
    </Group>
    <Group
       location = "container:"
       name = "BookSource">
       <Group
-         location = "container:"
-         name = "Chapter 05">
+         location = "group:private/BookSource/06-time-based-operators"
+         name = "06-time-based-operators">
          <FileRef
-            location = "group:private/BookSource/05-combining-operators/Final.playground">
+            location = "group:Final.playground">
          </FileRef>
          <FileRef
-            location = "group:private/BookSource/05-combining-operators/Starter.playground">
+            location = "group:Starter.playground">
          </FileRef>
-      </Group>
-      <Group
-         location = "container:"
-         name = "Chapter 04">
          <Group
-            location = "group:private/BookSource/04-filtering-operators/challenge"
+            location = "group:challenge"
             name = "challenge">
             <FileRef
                location = "group:Final.playground">
@@ -34,12 +33,6 @@
                location = "group:Starter.playground">
             </FileRef>
          </Group>
-         <FileRef
-            location = "group:private/BookSource/04-filtering-operators/Starter.playground">
-         </FileRef>
-         <FileRef
-            location = "group:private/BookSource/04-filtering-operators/Final.playground">
-         </FileRef>
       </Group>
       <Group
          location = "container:"
@@ -73,6 +66,36 @@
          </Group>
          <FileRef
             location = "group:private/BookSource/03-transforming-operators/Final.playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Chapter 04">
+         <Group
+            location = "group:private/BookSource/04-filtering-operators/challenge"
+            name = "challenge">
+            <FileRef
+               location = "group:Final.playground">
+            </FileRef>
+            <FileRef
+               location = "group:Starter.playground">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:private/BookSource/04-filtering-operators/Starter.playground">
+         </FileRef>
+         <FileRef
+            location = "group:private/BookSource/04-filtering-operators/Final.playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Chapter 05">
+         <FileRef
+            location = "group:private/BookSource/05-combining-operators/Final.playground">
+         </FileRef>
+         <FileRef
+            location = "group:private/BookSource/05-combining-operators/Starter.playground">
          </FileRef>
       </Group>
    </Group>
