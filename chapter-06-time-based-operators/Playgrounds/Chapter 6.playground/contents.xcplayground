@@ -3,5 +3,10 @@
     <pages>
         <page name='Shifting Time'/>
         <page name='Collecting Values'/>
+        <page name='Holding Off On Events - Debonuce'/>
+        <page name='Holding Off On Events - Throttle'/>
+        <page name='Holding Off On Events - Timeout'/>
+        <page name='Measuring Time'/>
+        <page name='Challenge'/>
     </pages>
 </playground>

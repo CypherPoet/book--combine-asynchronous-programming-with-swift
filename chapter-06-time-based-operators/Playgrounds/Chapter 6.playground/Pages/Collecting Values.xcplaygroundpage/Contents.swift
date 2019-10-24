@@ -9,6 +9,9 @@ let valuesPerSecond = 1.0
 let collectionInterval: TimeInterval = 4
 let maxCollectionCount = 2
 
+
+// MARK: - Publishers
+
 let basePublisher = PassthroughSubject<Date, Never>()
 
 
@@ -31,12 +34,16 @@ let collectedDatesPublisher2 = basePublisher
 
 
 
+// MARK: - Subscribers
+
 let subscription = Timer
     .publish(every: 1.0 / valuesPerSecond, on: .main, in: .common)
     .autoconnect()
     .subscribe(basePublisher)
 
 
+
+// MARK: - Timelines
 
 let baseTimeline = TimelineView(
     title: "Emitted Values (\(valuesPerSecond) per second)",
@@ -55,6 +62,8 @@ let collectedDatesTimeline2 = TimelineView(
     events: []
 )
 
+
+// MARK: - Viewing
 
 let view = VStack(spacing: 50) {
     baseTimeline
