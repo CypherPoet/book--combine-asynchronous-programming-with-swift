@@ -10,6 +10,7 @@ import SwiftUI
 
 
 struct CurrentCollageContainerView: View {
+//    @EnvironmentObject var collageStore: CollageStore
 }
 
 
@@ -17,7 +18,26 @@ struct CurrentCollageContainerView: View {
 extension CurrentCollageContainerView {
 
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            CurrentCollageView(
+                onSave: saveCollage,
+                onClear: clearCollage
+            )
+        }
+    }
+}
+
+
+// MARK: - Private Helpers
+extension CurrentCollageContainerView {
+
+    private func saveCollage() {
+        
+    }
+    
+    
+    private func clearCollage() {
+        
     }
 }
 

@@ -13,3 +13,9 @@ _Projects, playgrounds, and other materials made while following along with the 
     - **🥅 Challenge:** Create a Blackjack Card Dealer
     
 
+- [Chapter 8: Combine in Practice: Building a Photo Collage App](./08-photo-collage-app)
+    - Using Combine publishers in custom views.
+    - Handling user events with Combine.
+    - Navigating between views and exchanging data via publishers.
+    - Using a variety of operators to create different subscriptions to implement your app's logic.
+    - Wrapping existing Cocoa APIs so you can conveniently use them in your Combine code.

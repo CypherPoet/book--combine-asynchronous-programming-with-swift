@@ -4,19 +4,47 @@
    <Group
       location = "container:"
       name = "MyFiles">
+      <Group
+         location = "container:"
+         name = "08 - Collage App">
+         <FileRef
+            location = "group:08-photo-collage-app/Collage/Collage.xcodeproj">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "07- Sequence Based Operators">
+         <FileRef
+            location = "group:07-sequence-based-operators/Playgrounds/Chapter7.playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "06 - Time Based Operators">
+         <FileRef
+            location = "group:06-time-based-operators/Playgrounds/Chapter 6.playground">
+         </FileRef>
+      </Group>
       <FileRef
-         location = "group:/Users/briansipple/lxda/swift/Combine/book--combine-asynchronous-programming-with-swift/chapter-06-time-based-operators/Playgrounds/Chapter 6.playground">
-      </FileRef>
-      <FileRef
-         location = "group:/Users/briansipple/lxda/swift/Combine/book--combine-asynchronous-programming-with-swift/02-publishers-and-subscribers/Playgrounds/Chapters 2-5.playground">
+         location = "group:chapters-2-5/Playgrounds/Chapters 2-5.playground">
       </FileRef>
    </Group>
    <Group
       location = "container:"
       name = "BookSource">
       <Group
+         location = "container:"
+         name = "07- Sequence Based Operators">
+         <FileRef
+            location = "group:private/BookSource/07-sequence-operators/Starter.playground">
+         </FileRef>
+         <FileRef
+            location = "group:private/BookSource/07-sequence-operators/Final.playground">
+         </FileRef>
+      </Group>
+      <Group
          location = "group:private/BookSource/06-time-based-operators"
-         name = "06-time-based-operators">
+         name = "06 - Time Based Operators">
          <FileRef
             location = "group:Final.playground">
          </FileRef>
