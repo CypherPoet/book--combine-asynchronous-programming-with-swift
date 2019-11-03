@@ -23,9 +23,6 @@ final class CurrentCollageViewModel: ObservableObject {
     @Published var isAddEnabled = true
     @Published var isSaveEnabled = false
 
-    @Published var latestSavedCollageId: String? = nil
-    @Published var saveErrorMessage: String? = nil
-    
     
     init(
         collage: ImageCollage = ImageCollage(name: "New Collage", processedImage: nil)
@@ -69,10 +66,10 @@ extension CurrentCollageViewModel {
     
     private var collageImagePublisher: AnyPublisher<UIImage, Never> {
         $sourceImages
-            .compactMap({ images in
+            .compactMap({ imageList in
                 // 📝 `drop(while:)` doesn't cut it here, because that won't drop again after
                 // we start adding images, and then clear then.
-                images.isEmpty ? nil : images
+                imageList.isEmpty ? nil : imageList
             })
             .combineLatest(isAddEnabledPublisher)
             .prefix(while: { (_, isAddEnabled) in isAddEnabled })
@@ -103,7 +100,6 @@ extension CurrentCollageViewModel {
         collagePreview.processedImage = nil
     }
 }
-
 
 
 

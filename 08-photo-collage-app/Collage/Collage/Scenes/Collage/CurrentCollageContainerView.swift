@@ -11,12 +11,12 @@ import Combine
 
 
 struct CurrentCollageContainerView: View {
-//    @Environment var store: AppStore
-    
-    private var viewModel = CurrentCollageViewModel()
+    private var viewModel = CurrentCollageContainerViewModel()
     
     @State private var isShowingSaveAlert = false
+    @State private var isShowingPhotosAuthAlert = false
     @State private var latestSavedCollageId: String? = nil
+    @State private var saveErrorTitle: String? = nil
     @State private var saveErrorMessage: String? = nil
 }
 
@@ -27,34 +27,28 @@ extension CurrentCollageContainerView {
     var body: some View {
         NavigationView {
             CurrentCollageView(
-                viewModel: viewModel,
-                onSave: saveCollage,
-                onClear: clearCollage
+                viewModel: CurrentCollageViewModel(),
+                onSave: save(imageCollage:)
             )
         }
-        .alert(isPresented: $isShowingSaveAlert, content: { self.saveAlert })
+        .alert(isPresented: $isShowingSaveAlert, content: { self.onSaveAlert })
+        .alert(isPresented: $isShowingPhotosAuthAlert, content: { self.photosAuthorizationAlert })
     }
 }
 
 
-// MARK: - View Variables
+// MARK: - Computeds
 extension CurrentCollageContainerView {
     
-    private var saveAlertTitle: Text {
+    private var saveAlertTitle: Text { Text(saveErrorTitle ?? "Success") }
+
+    private var saveAlertMessage: Text? {
         if let errorMessage = saveErrorMessage {
             return Text(errorMessage)
         } else {
             guard let id = latestSavedCollageId else { preconditionFailure() }
-            
             return Text("Saved with id: \(id)")
         }
-    }
-    
-
-    private var saveAlertMessage: Text? {
-        guard saveErrorMessage != nil else { return nil }
-        
-        return Text("An error occurred while trying to save:")
     }
 }
 
@@ -62,10 +56,18 @@ extension CurrentCollageContainerView {
 // MARK: - View Variables
 extension CurrentCollageContainerView {
     
-    private var saveAlert: Alert {
+    private var onSaveAlert: Alert {
         Alert(
             title: saveAlertTitle,
             message: saveAlertMessage,
+            dismissButton: .default(Text("OK"))
+        )
+    }
+    
+    private var photosAuthorizationAlert: Alert {
+        Alert(
+            title: Text("No access to Camera Roll"),
+            message: Text("You can grant access to Collage from the Settings app."),
             dismissButton: .default(Text("OK"))
         )
     }
@@ -75,15 +77,16 @@ extension CurrentCollageContainerView {
 // MARK: - Private Helpers
 extension CurrentCollageContainerView {
 
-    private func saveCollage() {
-        guard let processedImage = viewModel.collagePreview.processedImage else {
+    private func save(imageCollage: ImageCollage) {
+        guard let processedImage = imageCollage.processedImage else {
             preconditionFailure("Save should be disabled when no collage image is present")
         }
         
-        
-        // TODO: Place this in a `CollageState` struct, then send an action to the store from here.?
-        // That could also be the responsibility of the PhotoWriter if it knew it was doing
-        // something that affected state
+        guard viewModel.isPhotoWriterAuthorized else {
+            isShowingPhotosAuthAlert = true
+            return
+        }
+
         _ = PhotoWriter.save(processedImage)
             .receive(on: DispatchQueue.main)
             .sink(
@@ -92,21 +95,18 @@ extension CurrentCollageContainerView {
                     case .finished: break
                     case .failure(let error):
                         self.isShowingSaveAlert = true
+                        self.saveErrorTitle = "An error occurred while trying to save:"
                         self.saveErrorMessage = error.localizedDescription
                     }
                 },
                 receiveValue: { photoId in
                     self.isShowingSaveAlert = true
+                    self.saveErrorTitle = nil
                     self.saveErrorMessage = nil
                     self.latestSavedCollageId = photoId
                 }
             )
             
-    }
-    
-    
-    private func clearCollage() {
-        viewModel.clearCollage()
     }
 }
 

@@ -20,6 +20,24 @@ enum PhotoWriter {
     }
     
     
+    static var isAuthorized: Future<Bool, Never> {
+        Future { resolve in
+            PHPhotoLibrary.requestAuthorization({ authStatus in
+                switch authStatus {
+                case .authorized:
+                    resolve(.success(true))
+                case .notDetermined,
+                     .restricted,
+                     .denied:
+                    resolve(.success(false))
+                 @unknown default:
+                    resolve(.success(false))
+                }
+            })
+        }
+    }
+    
+    
     static func save(_ image: UIImage) -> Future<String, PhotoWriter.Error> {
         Future { resolve in
             do {

@@ -21,6 +21,7 @@
 		F3A5BF872366D5930031FACF /* CurrentCollageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5BF862366D5930031FACF /* CurrentCollageViewModel.swift */; };
 		F3B8296B236BCC71001244F7 /* CollageWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B8296A236BCC71001244F7 /* CollageWriter.swift */; };
 		F3E011C22367FE3E0086C207 /* CypherPoetSwiftUIKit.ButtonStyles in Frameworks */ = {isa = PBXBuildFile; productRef = F3E011C12367FE3E0086C207 /* CypherPoetSwiftUIKit.ButtonStyles */; };
+		F3E53672236F6CA200C512B8 /* CurrentCollageContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E53671236F6CA200C512B8 /* CurrentCollageContainerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		F3A5BF842366D53A0031FACF /* AddCollagePhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCollagePhotosView.swift; sourceTree = "<group>"; };
 		F3A5BF862366D5930031FACF /* CurrentCollageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentCollageViewModel.swift; sourceTree = "<group>"; };
 		F3B8296A236BCC71001244F7 /* CollageWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollageWriter.swift; sourceTree = "<group>"; };
+		F3E53671236F6CA200C512B8 /* CurrentCollageContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentCollageContainerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				F3A5BF822366D5200031FACF /* CurrentCollageView.swift */,
 				F309E19123679740008834FF /* CollageGrid.swift */,
 				F309E18F2366DCA5008834FF /* CurrentCollageContainerView.swift */,
+				F3E53671236F6CA200C512B8 /* CurrentCollageContainerViewModel.swift */,
 				F3A5BF862366D5930031FACF /* CurrentCollageViewModel.swift */,
 				F3A5BF842366D53A0031FACF /* AddCollagePhotosView.swift */,
 			);
@@ -237,6 +240,7 @@
 				F3A5BF6E2366D4880031FACF /* SceneDelegate.swift in Sources */,
 				F3A5BF852366D53A0031FACF /* AddCollagePhotosView.swift in Sources */,
 				F309E19223679740008834FF /* CollageGrid.swift in Sources */,
+				F3E53672236F6CA200C512B8 /* CurrentCollageContainerViewModel.swift in Sources */,
 				F309E19A2367A1BC008834FF /* UIImage+Collage.swift in Sources */,
 				F309E1902366DCA5008834FF /* CurrentCollageContainerView.swift in Sources */,
 				F3A5BF832366D5200031FACF /* CurrentCollageView.swift in Sources */,
