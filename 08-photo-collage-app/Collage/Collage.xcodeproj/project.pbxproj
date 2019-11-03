@@ -19,6 +19,7 @@
 		F3A5BF832366D5200031FACF /* CurrentCollageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5BF822366D5200031FACF /* CurrentCollageView.swift */; };
 		F3A5BF852366D53A0031FACF /* AddCollagePhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5BF842366D53A0031FACF /* AddCollagePhotosView.swift */; };
 		F3A5BF872366D5930031FACF /* CurrentCollageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5BF862366D5930031FACF /* CurrentCollageViewModel.swift */; };
+		F3B8296B236BCC71001244F7 /* CollageWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B8296A236BCC71001244F7 /* CollageWriter.swift */; };
 		F3E011C22367FE3E0086C207 /* CypherPoetSwiftUIKit.ButtonStyles in Frameworks */ = {isa = PBXBuildFile; productRef = F3E011C12367FE3E0086C207 /* CypherPoetSwiftUIKit.ButtonStyles */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		F3A5BF822366D5200031FACF /* CurrentCollageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentCollageView.swift; sourceTree = "<group>"; };
 		F3A5BF842366D53A0031FACF /* AddCollagePhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCollagePhotosView.swift; sourceTree = "<group>"; };
 		F3A5BF862366D5930031FACF /* CurrentCollageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentCollageViewModel.swift; sourceTree = "<group>"; };
+		F3B8296A236BCC71001244F7 /* CollageWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollageWriter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				F309E1982367A1B1008834FF /* Extensions */,
+				F3B8296A236BCC71001244F7 /* CollageWriter.swift */,
 			);
 			path = Reusables;
 			sourceTree = "<group>";
@@ -102,14 +105,14 @@
 		F3A5BF6A2366D4880031FACF /* Collage */ = {
 			isa = PBXGroup;
 			children = (
-				F309E1972367A1A7008834FF /* Reusables */,
-				F309E19323679E5A008834FF /* Data */,
 				F3A5BF792366D48A0031FACF /* Info.plist */,
 				F3A5BF6B2366D4880031FACF /* AppDelegate.swift */,
 				F3A5BF6D2366D4880031FACF /* SceneDelegate.swift */,
+				F309E19323679E5A008834FF /* Data */,
 				F3A5BF762366D48A0031FACF /* LaunchScreen.storyboard */,
 				F3A5BF732366D48A0031FACF /* Preview Content */,
 				F3A5BF812366D4F70031FACF /* Resources */,
+				F309E1972367A1A7008834FF /* Reusables */,
 				F3A5BF7F2366D4D30031FACF /* Scenes */,
 			);
 			path = Collage;
@@ -230,6 +233,7 @@
 			files = (
 				F3A5BF872366D5930031FACF /* CurrentCollageViewModel.swift in Sources */,
 				F3A5BF6C2366D4880031FACF /* AppDelegate.swift in Sources */,
+				F3B8296B236BCC71001244F7 /* CollageWriter.swift in Sources */,
 				F3A5BF6E2366D4880031FACF /* SceneDelegate.swift in Sources */,
 				F3A5BF852366D53A0031FACF /* AddCollagePhotosView.swift in Sources */,
 				F309E19223679740008834FF /* CollageGrid.swift in Sources */,

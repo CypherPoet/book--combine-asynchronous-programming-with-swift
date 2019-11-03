@@ -13,7 +13,7 @@ struct ImageCollage {
     let id = UUID()
     
     var name: String
-    var images: [Image]
+    var processedImage: UIImage?
 }
 
 
@@ -31,11 +31,7 @@ extension ImageCollage: Hashable {
 
 let sampleCollage = ImageCollage(
     name: "Mass Effect",
-    images: [
-        Image("image-1"),
-        Image("image-2"),
-        Image("image-3"),
-    ]
+    processedImage: nil
 )
 
 #endif
