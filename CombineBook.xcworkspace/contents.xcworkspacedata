@@ -6,6 +6,13 @@
       name = "MyFiles">
       <Group
          location = "container:"
+         name = "13 - Resource Management">
+         <FileRef
+            location = "group:13-resource-management/Playgrounds/MyPlayground.playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
          name = "08 - Collage App">
          <FileRef
             location = "group:08-photo-collage-app/Collage/Collage.xcodeproj">

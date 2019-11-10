@@ -19,3 +19,9 @@ _Projects, playgrounds, and other materials made while following along with the 
     - Navigating between views and exchanging data via publishers.
     - Using a variety of operators to create different subscriptions to implement your app's logic.
     - Wrapping existing Cocoa APIs so you can conveniently use them in your Combine code.
+
+
+- Chapters 9-14: Networking with Combine
+
+
+- [Chapters 15-19: Bulding an App with SwiftUI and Combine Networking](./15-19-bitcoin-average-api-app)
