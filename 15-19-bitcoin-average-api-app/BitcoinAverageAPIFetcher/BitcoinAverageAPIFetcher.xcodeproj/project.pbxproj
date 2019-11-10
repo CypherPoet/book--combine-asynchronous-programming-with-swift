@@ -11,7 +11,6 @@
 		F38A0E1C2377994700294E27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A0E1B2377994700294E27 /* SceneDelegate.swift */; };
 		F38A0E202377994800294E27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F38A0E1F2377994800294E27 /* Assets.xcassets */; };
 		F38A0E232377994800294E27 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F38A0E222377994800294E27 /* Preview Assets.xcassets */; };
-		F38A0E262377994800294E27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F38A0E242377994800294E27 /* LaunchScreen.storyboard */; };
 		F38A0E3523779E0800294E27 /* PricesListContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A0E3423779E0800294E27 /* PricesListContainerView.swift */; };
 		F38A0E3A2377A0DE00294E27 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A0E392377A0DE00294E27 /* AppState.swift */; };
 		F38A0E3D2377A10E00294E27 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A0E3C2377A10E00294E27 /* SampleData.swift */; };
@@ -20,6 +19,8 @@
 		F38A0E442377A8E400294E27 /* CypherPoetSwiftUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = F38A0E432377A8E400294E27 /* CypherPoetSwiftUIKit */; };
 		F38A0E472377A90200294E27 /* SatoshiVSKit in Frameworks */ = {isa = PBXBuildFile; productRef = F38A0E462377A90200294E27 /* SatoshiVSKit */; };
 		F38A0E492377B29800294E27 /* PricesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A0E482377B29800294E27 /* PricesListView.swift */; };
+		F38A0E4C2377E25D00294E27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F38A0E4A2377E25C00294E27 /* LaunchScreen.storyboard */; };
+		F38A0E502377EC2C00294E27 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A0E4F2377EC2C00294E27 /* Dependencies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +29,6 @@
 		F38A0E1B2377994700294E27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F38A0E1F2377994800294E27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F38A0E222377994800294E27 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		F38A0E252377994800294E27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F38A0E272377994800294E27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F38A0E3423779E0800294E27 /* PricesListContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricesListContainerView.swift; sourceTree = "<group>"; };
 		F38A0E392377A0DE00294E27 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -36,6 +36,8 @@
 		F38A0E3E2377A1A000294E27 /* PricesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricesState.swift; sourceTree = "<group>"; };
 		F38A0E402377A1B100294E27 /* SettingsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsState.swift; sourceTree = "<group>"; };
 		F38A0E482377B29800294E27 /* PricesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricesListView.swift; sourceTree = "<group>"; };
+		F38A0E4B2377E25D00294E27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = BitcoinAverageAPIFetcher/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		F38A0E4F2377EC2C00294E27 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,11 +72,11 @@
 		F38A0E182377994700294E27 /* BitcoinAverageAPIFetcher */ = {
 			isa = PBXGroup;
 			children = (
+				F38A0E4E2377EC1800294E27 /* Networking */,
 				F38A0E272377994800294E27 /* Info.plist */,
 				F38A0E192377994700294E27 /* AppDelegate.swift */,
 				F38A0E1B2377994700294E27 /* SceneDelegate.swift */,
 				F38A0E3223779DB500294E27 /* Data */,
-				F38A0E242377994800294E27 /* LaunchScreen.storyboard */,
 				F38A0E212377994800294E27 /* Preview Content */,
 				F38A0E3323779DE200294E27 /* Resources */,
 				F38A0E3023779DA100294E27 /* Reusables */,
@@ -95,6 +97,7 @@
 		F38A0E2D23779D3A00294E27 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F38A0E4A2377E25C00294E27 /* LaunchScreen.storyboard */,
 				F38A0E2F23779D5900294E27 /* Prices */,
 				F38A0E2E23779D5600294E27 /* Settings */,
 			);
@@ -166,6 +169,14 @@
 			path = "Sample Data";
 			sourceTree = "<group>";
 		};
+		F38A0E4E2377EC1800294E27 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F38A0E4F2377EC2C00294E27 /* Dependencies.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -232,7 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F38A0E262377994800294E27 /* LaunchScreen.storyboard in Resources */,
+				F38A0E4C2377E25D00294E27 /* LaunchScreen.storyboard in Resources */,
 				F38A0E232377994800294E27 /* Preview Assets.xcassets in Resources */,
 				F38A0E202377994800294E27 /* Assets.xcassets in Resources */,
 			);
@@ -248,6 +259,7 @@
 				F38A0E1A2377994700294E27 /* AppDelegate.swift in Sources */,
 				F38A0E412377A1B100294E27 /* SettingsState.swift in Sources */,
 				F38A0E3F2377A1A000294E27 /* PricesState.swift in Sources */,
+				F38A0E502377EC2C00294E27 /* Dependencies.swift in Sources */,
 				F38A0E1C2377994700294E27 /* SceneDelegate.swift in Sources */,
 				F38A0E492377B29800294E27 /* PricesListView.swift in Sources */,
 				F38A0E3523779E0800294E27 /* PricesListContainerView.swift in Sources */,
@@ -259,13 +271,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F38A0E242377994800294E27 /* LaunchScreen.storyboard */ = {
+		F38A0E4A2377E25C00294E27 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F38A0E252377994800294E27 /* Base */,
+				F38A0E4B2377E25D00294E27 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
+			path = BitcoinAverageAPIFetcher;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXVariantGroup section */
 

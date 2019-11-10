@@ -17,13 +17,16 @@ struct PricesState {
 
 
 enum PricesSideEffect: SideEffect {
-    case fetchCurrentPricesList
+    case fetchLatestIndexPrices
     
     
     func mapToAction() -> AnyPublisher<AppAction, Never> {
         switch self {
-        case .fetchCurrentPricesList:
-            return Just(AppAction.prices(.setCurrentPricesList(with: [])))
+        case .fetchLatestIndexPrices:
+            return Dependencies.bitcoinAverageAPIService
+                .tickerDataList(for: Dependencies.supportedShitcoins)
+                .replaceError(with: [])
+                .map { AppAction.prices(.setCurrentPricesList(with: $0)) }
                 .eraseToAnyPublisher()
         }
     }

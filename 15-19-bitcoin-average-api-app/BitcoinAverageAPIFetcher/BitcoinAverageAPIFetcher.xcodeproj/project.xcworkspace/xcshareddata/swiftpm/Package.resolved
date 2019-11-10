@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/CypherPoet/SatoshiVSKit.git",
         "state": {
           "branch": null,
-          "revision": "1ce663e542e8ac74cb5f3c086f7bd6503ab9a230",
-          "version": "0.0.9"
+          "revision": "fde65da5abfed727de305e5b3c712d7357349fff",
+          "version": "0.0.10"
         }
       }
     ]
