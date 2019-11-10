@@ -19,6 +19,7 @@
 		F38A0E412377A1B100294E27 /* SettingsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A0E402377A1B100294E27 /* SettingsState.swift */; };
 		F38A0E442377A8E400294E27 /* CypherPoetSwiftUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = F38A0E432377A8E400294E27 /* CypherPoetSwiftUIKit */; };
 		F38A0E472377A90200294E27 /* SatoshiVSKit in Frameworks */ = {isa = PBXBuildFile; productRef = F38A0E462377A90200294E27 /* SatoshiVSKit */; };
+		F38A0E492377B29800294E27 /* PricesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A0E482377B29800294E27 /* PricesListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		F38A0E3C2377A10E00294E27 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		F38A0E3E2377A1A000294E27 /* PricesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricesState.swift; sourceTree = "<group>"; };
 		F38A0E402377A1B100294E27 /* SettingsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsState.swift; sourceTree = "<group>"; };
+		F38A0E482377B29800294E27 /* PricesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricesListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				F38A0E3423779E0800294E27 /* PricesListContainerView.swift */,
+				F38A0E482377B29800294E27 /* PricesListView.swift */,
 			);
 			path = Prices;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				F38A0E412377A1B100294E27 /* SettingsState.swift in Sources */,
 				F38A0E3F2377A1A000294E27 /* PricesState.swift in Sources */,
 				F38A0E1C2377994700294E27 /* SceneDelegate.swift in Sources */,
+				F38A0E492377B29800294E27 /* PricesListView.swift in Sources */,
 				F38A0E3523779E0800294E27 /* PricesListContainerView.swift in Sources */,
 				F38A0E3D2377A10E00294E27 /* SampleData.swift in Sources */,
 				F38A0E3A2377A0DE00294E27 /* AppState.swift in Sources */,

@@ -12,7 +12,7 @@ import SatoshiVSKit
 
 
 struct PricesState {
-    let currentPrices: [BitcoinPrice] = []
+    var pricesIndexData: [BitcoinPrice] = []
 }
 
 
