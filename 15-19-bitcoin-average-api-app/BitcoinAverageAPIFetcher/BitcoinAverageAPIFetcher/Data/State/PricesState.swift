@@ -26,7 +26,7 @@ enum PricesSideEffect: SideEffect {
             return Dependencies.bitcoinAverageAPIService
                 .tickerDataList(for: Dependencies.supportedShitcoins)
                 .replaceError(with: [])
-                .map { AppAction.prices(.setCurrentPricesList(with: $0)) }
+                .map { AppAction.prices(.setPriceIndexData(with: $0)) }
                 .eraseToAnyPublisher()
         }
     }
@@ -35,12 +35,15 @@ enum PricesSideEffect: SideEffect {
 
 
 enum PricesAction {
-    case setCurrentPricesList(with: [BitcoinPrice])
+    case setPriceIndexData(with: [BitcoinPrice])
 }
 
 
 
 // MARK: - Reducer
 let pricesReducer = Reducer<PricesState, PricesAction> { state, action in
-    
+    switch action {
+    case let .setPriceIndexData(prices):
+        state.pricesIndexData = prices
+    }
 }

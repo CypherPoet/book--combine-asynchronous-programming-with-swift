@@ -21,6 +21,8 @@
 		F38A0E492377B29800294E27 /* PricesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A0E482377B29800294E27 /* PricesListView.swift */; };
 		F38A0E4C2377E25D00294E27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F38A0E4A2377E25C00294E27 /* LaunchScreen.storyboard */; };
 		F38A0E502377EC2C00294E27 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A0E4F2377EC2C00294E27 /* Dependencies.swift */; };
+		F38A0E522377F2FE00294E27 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A0E512377F2FE00294E27 /* SettingsView.swift */; };
+		F38A0E562377F6AB00294E27 /* PricesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A0E552377F6AB00294E27 /* PricesListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		F38A0E482377B29800294E27 /* PricesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricesListView.swift; sourceTree = "<group>"; };
 		F38A0E4B2377E25D00294E27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = BitcoinAverageAPIFetcher/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		F38A0E4F2377EC2C00294E27 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
+		F38A0E512377F2FE00294E27 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F38A0E552377F6AB00294E27 /* PricesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricesListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 		F38A0E2E23779D5600294E27 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				F38A0E512377F2FE00294E27 /* SettingsView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -116,6 +121,7 @@
 			children = (
 				F38A0E3423779E0800294E27 /* PricesListContainerView.swift */,
 				F38A0E482377B29800294E27 /* PricesListView.swift */,
+				F38A0E552377F6AB00294E27 /* PricesListViewModel.swift */,
 			);
 			path = Prices;
 			sourceTree = "<group>";
@@ -261,6 +267,8 @@
 				F38A0E3F2377A1A000294E27 /* PricesState.swift in Sources */,
 				F38A0E502377EC2C00294E27 /* Dependencies.swift in Sources */,
 				F38A0E1C2377994700294E27 /* SceneDelegate.swift in Sources */,
+				F38A0E522377F2FE00294E27 /* SettingsView.swift in Sources */,
+				F38A0E562377F6AB00294E27 /* PricesListViewModel.swift in Sources */,
 				F38A0E492377B29800294E27 /* PricesListView.swift in Sources */,
 				F38A0E3523779E0800294E27 /* PricesListContainerView.swift in Sources */,
 				F38A0E3D2377A10E00294E27 /* SampleData.swift in Sources */,

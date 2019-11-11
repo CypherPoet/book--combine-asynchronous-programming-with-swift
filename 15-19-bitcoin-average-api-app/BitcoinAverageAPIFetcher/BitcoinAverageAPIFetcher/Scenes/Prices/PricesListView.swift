@@ -10,6 +10,7 @@ import SwiftUI
 
 
 struct PricesListView: View {
+    @ObservedObject private(set) var viewModel: PricesListViewModel
 }
 
 
@@ -17,7 +18,9 @@ struct PricesListView: View {
 extension PricesListView {
 
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("\(viewModel.displayedPricesCount) Prices")
+        }
     }
 }
 
@@ -41,6 +44,8 @@ extension PricesListView {
 struct PricesListView_Previews: PreviewProvider {
 
     static var previews: some View {
-        PricesListView()
+        PricesListView(
+            viewModel: PricesListViewModel(prices: SamplePrices.default)
+        )
     }
 }
