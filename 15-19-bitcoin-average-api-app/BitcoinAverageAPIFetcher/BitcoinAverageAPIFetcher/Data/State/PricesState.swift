@@ -6,12 +6,14 @@
 // ✌️
 //
 
+import Foundation
 import Combine
 import CypherPoetSwiftUIKit
 import SatoshiVSKit
 
 
 struct PricesState {
+    var indexDataFetchError: BitcoinAverageAPIService.Error? = nil
     var pricesIndexData: [BitcoinPrice] = []
 }
 
@@ -25,8 +27,13 @@ enum PricesSideEffect: SideEffect {
         case .fetchLatestIndexPrices:
             return Dependencies.bitcoinAverageAPIService
                 .tickerDataList(for: Dependencies.supportedShitcoins)
-                .replaceError(with: [])
-                .map { AppAction.prices(.setPriceIndexData(with: $0)) }
+                .receive(on: DispatchQueue.main)
+                .map { prices in
+                    AppAction.prices(.setPriceIndexData(prices))
+                }
+                .catch { error in
+                    Just(AppAction.prices(.fetchLatestIndexPrices(error: error)))
+                }
                 .eraseToAnyPublisher()
         }
     }
@@ -35,7 +42,8 @@ enum PricesSideEffect: SideEffect {
 
 
 enum PricesAction {
-    case setPriceIndexData(with: [BitcoinPrice])
+    case setPriceIndexData([BitcoinPrice])
+    case fetchLatestIndexPrices(error: BitcoinAverageAPIService.Error)
 }
 
 
@@ -45,5 +53,7 @@ let pricesReducer = Reducer<PricesState, PricesAction> { state, action in
     switch action {
     case let .setPriceIndexData(prices):
         state.pricesIndexData = prices
+    case let .fetchLatestIndexPrices(error):
+        state.indexDataFetchError = error
     }
 }

@@ -16,17 +16,26 @@ final class PricesListViewModel: ObservableObject {
     private var subscriptions = Set<AnyCancellable>()
 
     var prices: [BitcoinPrice]
-    
+    var pricesFetchError: BitcoinAverageAPIService.Error?
 
+    
     // MARK: - Published Properties
     
     @Published var displayedPrices: [BitcoinPrice] = []
     @Published var symbolFilters: [Shitcoin.CurrencySymbol] = []
+    @Published var pricesFetchErrorMessage: String = ""
+    @Published var isShowingPricesFetchError: Bool = false
     
-
+    
     // MARK: - Init
-    init(prices: [BitcoinPrice] = []) {
+    init(
+        prices: [BitcoinPrice] = [],
+        pricesFetchError: BitcoinAverageAPIService.Error? = nil
+    ) {
         self.prices = prices
+        self.displayedPrices = prices
+
+        self.pricesFetchError = pricesFetchError
         
         setupSubscribers()
     }
@@ -37,7 +46,7 @@ final class PricesListViewModel: ObservableObject {
 extension PricesListViewModel {
 
     private var allPricesPublisher: AnyPublisher<[BitcoinPrice], Never> {
-        CurrentValueSubject<[BitcoinPrice], Never>(prices)
+        CurrentValueSubject(prices)
             .eraseToAnyPublisher()
     }
     
@@ -59,7 +68,14 @@ extension PricesListViewModel {
                     : self.filteredPricesPublisher
             }
             .eraseToAnyPublisher()
-
+    }
+    
+    
+    private var pricesFetchErrorMessagePublisher: AnyPublisher<String, Never> {
+        CurrentValueSubject(pricesFetchError)
+            .compactMap { $0?.errorDescription }
+            .print("pricesFetchErrorMessagePublisher")
+            .eraseToAnyPublisher()
     }
 }
 
@@ -83,6 +99,18 @@ private extension PricesListViewModel {
         displayedPricesPublisher
             .receive(on: DispatchQueue.main)
             .assign(to: \.displayedPrices, on: self)
+            .store(in: &subscriptions)
+        
+        
+        pricesFetchErrorMessagePublisher
+            .receive(on: DispatchQueue.main)
+            .assign(to: \.pricesFetchErrorMessage, on: self)
+            .store(in: &subscriptions)
+        
+        
+        pricesFetchErrorMessagePublisher
+            .map { _ in true }
+            .assign(to: \.isShowingPricesFetchError, on: self)
             .store(in: &subscriptions)
     }
 }

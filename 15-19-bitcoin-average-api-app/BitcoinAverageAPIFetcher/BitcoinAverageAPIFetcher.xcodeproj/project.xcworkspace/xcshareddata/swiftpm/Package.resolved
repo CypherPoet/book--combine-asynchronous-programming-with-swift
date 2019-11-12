@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/CypherPoet/NetStack.git",
         "state": {
           "branch": null,
-          "revision": "1fd4063de1e95002eadddc41a43345054c13cb16",
-          "version": "0.0.11"
+          "revision": "1cd12ddac8bc6026621cad30341f253d6ab29af8",
+          "version": "0.0.16"
         }
       },
       {
@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/CypherPoet/SatoshiVSKit.git",
         "state": {
           "branch": null,
-          "revision": "1db8e171c77cbdfffada15d0e0e070c80d098250",
-          "version": "0.0.13"
+          "revision": "7f6bd4a84a22e436bdb4d270ba9a4cfecd153fe7",
+          "version": "0.0.17"
         }
       }
     ]

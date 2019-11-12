@@ -22,7 +22,8 @@ extension PricesListContainerView {
         NavigationView {
             PricesListView(
                 viewModel: PricesListViewModel(
-                    prices: store.state.pricesState.pricesIndexData
+                    prices: store.state.pricesState.pricesIndexData,
+                    pricesFetchError: store.state.pricesState.indexDataFetchError
                 )
             )
                 .navigationBarTitle("Prices Index")
@@ -53,6 +54,7 @@ extension PricesListContainerView {
             Image(systemName: "gear")
                 .resizable()
                 .imageScale(.large)
+                .accessibility(label: Text("View the user settings page."))
         })
     }
 }

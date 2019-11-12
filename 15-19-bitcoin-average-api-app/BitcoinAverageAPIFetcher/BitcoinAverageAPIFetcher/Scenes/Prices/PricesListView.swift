@@ -18,24 +18,50 @@ struct PricesListView: View {
 extension PricesListView {
 
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
+            
             Text("\(viewModel.displayedPricesCount) Prices")
+                .font(.headline)
+                .padding(.leading)
+            
+            List {
+                Section(header: Text("Filter: All")) {
+                    ForEach(viewModel.displayedPrices) { price in
+                        VStack(alignment: .leading, spacing: 22) {
+                            TimestampBadge(timeValue: price.timestampDate)
+                            
+                            HStack {
+                                Text("\(price.shitcoinSymbol)")
+                                Spacer()
+                                Text("\(NSDecimalNumber(decimal: price.mostRecent), formatter: NumberFormatters.priceReading)")
+                            }
+                        }
+                        .padding()
+                    }
+                }
+            }
         }
+        .alert(isPresented: $viewModel.isShowingPricesFetchError, content: { self.pricesFetchAlert })
     }
 }
 
 
+
 // MARK: - Computeds
 extension PricesListView {
-
-
 }
 
 
 // MARK: - View Variables
 extension PricesListView {
-
-
+    
+    private var pricesFetchAlert: Alert {
+        Alert(
+            title: Text("An error occurred while attempting to fetch prices"),
+            message: Text(viewModel.pricesFetchErrorMessage),
+            dismissButton: .default(Text("OK"))
+        )
+    }
 }
 
 
