@@ -26,6 +26,7 @@
 		F38A0E9F23794FAA00294E27 /* NumberFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A0E9E23794FA900294E27 /* NumberFormatters.swift */; };
 		F38A0EA2237956C400294E27 /* TimestampBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A0EA1237956C400294E27 /* TimestampBadge.swift */; };
 		F38A0EA423795F2100294E27 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A0EA323795F2100294E27 /* DateFormatters.swift */; };
+		F398F9F3237AAE7B00A82FF8 /* BitcoinPrice+UpdatedAgoText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F398F9F2237AAE7B00A82FF8 /* BitcoinPrice+UpdatedAgoText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		F38A0E9E23794FA900294E27 /* NumberFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatters.swift; sourceTree = "<group>"; };
 		F38A0EA1237956C400294E27 /* TimestampBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimestampBadge.swift; sourceTree = "<group>"; };
 		F38A0EA323795F2100294E27 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
+		F398F9F2237AAE7B00A82FF8 /* BitcoinPrice+UpdatedAgoText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BitcoinPrice+UpdatedAgoText.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 		F38A0E3023779DA100294E27 /* Reusables */ = {
 			isa = PBXGroup;
 			children = (
+				F398F9F1237AAE6200A82FF8 /* Extensions */,
 				F38A0EA0237956B900294E27 /* Views */,
 				F38A0E9D23794F9900294E27 /* Formatters */,
 				F38A0E3123779DA800294E27 /* Constants */,
@@ -206,6 +209,14 @@
 				F38A0EA1237956C400294E27 /* TimestampBadge.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F398F9F1237AAE6200A82FF8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F398F9F2237AAE7B00A82FF8 /* BitcoinPrice+UpdatedAgoText.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +311,7 @@
 				F38A0E492377B29800294E27 /* PricesListView.swift in Sources */,
 				F38A0E3523779E0800294E27 /* PricesListContainerView.swift in Sources */,
 				F38A0E3D2377A10E00294E27 /* SampleData.swift in Sources */,
+				F398F9F3237AAE7B00A82FF8 /* BitcoinPrice+UpdatedAgoText.swift in Sources */,
 				F38A0E3A2377A0DE00294E27 /* AppState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

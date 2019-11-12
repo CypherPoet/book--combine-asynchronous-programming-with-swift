@@ -74,7 +74,6 @@ extension PricesListViewModel {
     private var pricesFetchErrorMessagePublisher: AnyPublisher<String, Never> {
         CurrentValueSubject(pricesFetchError)
             .compactMap { $0?.errorDescription }
-            .print("pricesFetchErrorMessagePublisher")
             .eraseToAnyPublisher()
     }
 }

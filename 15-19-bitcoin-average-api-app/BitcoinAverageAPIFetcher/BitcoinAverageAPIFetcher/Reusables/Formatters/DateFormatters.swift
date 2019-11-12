@@ -28,4 +28,7 @@ enum DateFormatters {
         
         return formatter
     }()
+    
+    
+    static let priceUpdatedAgo = RelativeDateTimeFormatter()
 }
