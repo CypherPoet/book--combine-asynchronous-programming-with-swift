@@ -84,11 +84,11 @@
 		F38A0E182377994700294E27 /* BitcoinAverageAPIFetcher */ = {
 			isa = PBXGroup;
 			children = (
-				F38A0E4E2377EC1800294E27 /* Networking */,
 				F38A0E272377994800294E27 /* Info.plist */,
 				F38A0E192377994700294E27 /* AppDelegate.swift */,
 				F38A0E1B2377994700294E27 /* SceneDelegate.swift */,
 				F38A0E3223779DB500294E27 /* Data */,
+				F38A0E4E2377EC1800294E27 /* Networking */,
 				F38A0E212377994800294E27 /* Preview Content */,
 				F38A0E3323779DE200294E27 /* Resources */,
 				F38A0E3023779DA100294E27 /* Reusables */,
@@ -520,7 +520,7 @@
 			repositoryURL = "https://github.com/CypherPoet/SatoshiVSKit.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.6;
+				minimumVersion = 0.0.18;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

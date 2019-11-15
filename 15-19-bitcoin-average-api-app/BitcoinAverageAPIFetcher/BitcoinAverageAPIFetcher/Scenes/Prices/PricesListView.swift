@@ -13,6 +13,11 @@ struct PricesListView: View {
     @ObservedObject private(set) var viewModel: PricesListViewModel
     
     @State private var currentDate = Date()
+    
+    private let dateUpdateTimer = Timer
+        .publish(every: 10, on: .main, in: .common)
+        .autoconnect()
+        .eraseToAnyPublisher()
 }
 
 
@@ -56,6 +61,7 @@ extension PricesListView {
             }
         }
         .alert(isPresented: $viewModel.isShowingPricesFetchError, content: { self.pricesFetchAlert })
+        .onReceive(dateUpdateTimer) { self.currentDate = $0 }
     }
 }
 
@@ -85,7 +91,7 @@ struct PricesListView_Previews: PreviewProvider {
 
     static var previews: some View {
         PricesListView(
-            viewModel: PricesListViewModel(prices: SamplePrices.default)
+            viewModel: PricesListViewModel(store: SampleStore.default)
         )
     }
 }

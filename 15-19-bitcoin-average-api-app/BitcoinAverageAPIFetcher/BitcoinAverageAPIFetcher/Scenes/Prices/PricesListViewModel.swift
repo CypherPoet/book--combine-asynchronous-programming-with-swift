@@ -15,27 +15,25 @@ import SatoshiVSKit
 final class PricesListViewModel: ObservableObject {
     private var subscriptions = Set<AnyCancellable>()
 
-    var prices: [BitcoinPrice]
-    var pricesFetchError: BitcoinAverageAPIService.Error?
-
+    private let store: AppStore
+    private let prices: [BitcoinPrice]
+    private let pricesFetchError: BitcoinAverageAPIService.Error?
+    
     
     // MARK: - Published Properties
     
     @Published var displayedPrices: [BitcoinPrice] = []
     @Published var symbolFilters: [Shitcoin.CurrencySymbol] = []
-    @Published var pricesFetchErrorMessage: String = ""
     @Published var isShowingPricesFetchError: Bool = false
     
     
     // MARK: - Init
-    init(
-        prices: [BitcoinPrice] = [],
-        pricesFetchError: BitcoinAverageAPIService.Error? = nil
-    ) {
-        self.prices = prices
-        self.displayedPrices = prices
-
-        self.pricesFetchError = pricesFetchError
+    init(store: AppStore) {
+        self.store = store
+        
+        self.prices = store.state.pricesState.pricesIndexData
+        self.displayedPrices = self.prices
+        self.pricesFetchError = store.state.pricesState.indexDataFetchError
         
         setupSubscribers()
     }
@@ -71,9 +69,9 @@ extension PricesListViewModel {
     }
     
     
-    private var pricesFetchErrorMessagePublisher: AnyPublisher<String, Never> {
+    private var pricesFetchErrorPublisher: AnyPublisher<BitcoinAverageAPIService.Error, Never> {
         CurrentValueSubject(pricesFetchError)
-            .compactMap { $0?.errorDescription }
+            .compactMap { $0 }
             .eraseToAnyPublisher()
     }
 }
@@ -82,13 +80,11 @@ extension PricesListViewModel {
 // MARK: - Computeds
 extension PricesListViewModel {
     var displayedPricesCount: Int { displayedPrices.count }
+    
+    var pricesFetchErrorMessage: String {
+        pricesFetchError?.errorDescription ?? ""
+    }
 }
-
-
-// MARK: - Public Methods
-extension PricesListViewModel {
-}
-
 
 
 // MARK: - Private Helpers
@@ -101,13 +97,7 @@ private extension PricesListViewModel {
             .store(in: &subscriptions)
         
         
-        pricesFetchErrorMessagePublisher
-            .receive(on: DispatchQueue.main)
-            .assign(to: \.pricesFetchErrorMessage, on: self)
-            .store(in: &subscriptions)
-        
-        
-        pricesFetchErrorMessagePublisher
+        pricesFetchErrorPublisher
             .map { _ in true }
             .assign(to: \.isShowingPricesFetchError, on: self)
             .store(in: &subscriptions)

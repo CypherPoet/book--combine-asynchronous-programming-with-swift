@@ -20,6 +20,7 @@ enum Dependencies {
         Shitcoin.eth,
         Shitcoin.usd,
         Shitcoin.usdc,
-        Shitcoin(name: "Decred", symbol: "DCR", category: .crypto)
+        Shitcoin(name: "Decred", symbol: "DCR", category: .crypto),
+        Shitcoin(name: "Link", symbol: "LINK", category: .token)
     ]
 }

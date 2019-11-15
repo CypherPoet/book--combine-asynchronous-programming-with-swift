@@ -21,10 +21,7 @@ extension PricesListContainerView {
     var body: some View {
         NavigationView {
             PricesListView(
-                viewModel: PricesListViewModel(
-                    prices: store.state.pricesState.pricesIndexData,
-                    pricesFetchError: store.state.pricesState.indexDataFetchError
-                )
+                viewModel: PricesListViewModel(store: store)
             )
                 .navigationBarTitle("Prices Index")
                 .navigationBarItems(trailing: settingsButton)
