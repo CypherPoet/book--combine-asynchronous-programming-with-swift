@@ -11,6 +11,8 @@ import SwiftUI
 
 struct PricesListContainerView: View {
     @EnvironmentObject private var store: AppStore
+    @EnvironmentObject private var settingsViewModel: SettingsViewModel
+    
     @State private var isShowingSettingsSheet = false
 }
 
@@ -28,7 +30,8 @@ extension PricesListContainerView {
                 .onAppear(perform: fetchPrices)
         }
         .sheet(isPresented: $isShowingSettingsSheet) {
-            SettingsView()
+            SettingsContainerView()
+                .environmentObject(self.settingsViewModel)
         }
     }
 }
@@ -36,8 +39,6 @@ extension PricesListContainerView {
 
 // MARK: - Computeds
 extension PricesListContainerView {
-
-
 }
 
 
@@ -73,5 +74,7 @@ struct PricesListContainerView_Previews: PreviewProvider {
     static var previews: some View {
         PricesListContainerView()
             .environmentObject(SampleStore.default)
+            .environmentObject(SettingsViewModel(store: SampleStore.default))
     }
+    
 }

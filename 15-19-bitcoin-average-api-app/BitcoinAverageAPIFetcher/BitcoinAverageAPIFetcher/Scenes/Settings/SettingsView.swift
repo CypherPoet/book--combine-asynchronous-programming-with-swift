@@ -10,6 +10,7 @@ import SwiftUI
 
 
 struct SettingsView: View {
+    @EnvironmentObject var viewModel: SettingsViewModel
 }
 
 
@@ -17,8 +18,12 @@ struct SettingsView: View {
 extension SettingsView {
 
     var body: some View {
-        VStack {
-            Text("Hello World!")
+        List {
+            Section(header: Text("Filtered Shitcoins")) {
+                ForEach(viewModel.filteredShitcoins) { shitcoin in
+                    Text(shitcoin.name)
+                }
+            }
         }
         .navigationBarTitle("Settings", displayMode: .large)
     }

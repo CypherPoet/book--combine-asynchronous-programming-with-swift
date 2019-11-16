@@ -8,6 +8,8 @@
 
 import UIKit
 import SwiftUI
+import Combine
+
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -25,10 +27,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let window = UIWindow(windowScene: windowScene)
             let store = AppStore(initialState: AppState(), appReducer: appReducer)
 
+            let settingsViewModel = SettingsViewModel(store: store)
+            
             // Create the SwiftUI view that provides the window contents.
             let entryView = PricesListContainerView()
                 .accentColor(.purple)
                 .environmentObject(store)
+                .environmentObject(settingsViewModel)
 
             window.rootViewController = UIHostingController(rootView: entryView)
             self.window = window

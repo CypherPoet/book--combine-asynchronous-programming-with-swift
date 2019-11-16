@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F3628BE1237FA59F00770348 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3628BE0237FA59F00770348 /* SettingsViewModel.swift */; };
+		F3628BE3237FBA2E00770348 /* ShitcoinFilterSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3628BE2237FBA2E00770348 /* ShitcoinFilterSelectionView.swift */; };
+		F3628BE523808F3B00770348 /* ShitcoinFilterListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3628BE423808F3B00770348 /* ShitcoinFilterListItem.swift */; };
 		F38A0E1A2377994700294E27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A0E192377994700294E27 /* AppDelegate.swift */; };
 		F38A0E1C2377994700294E27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A0E1B2377994700294E27 /* SceneDelegate.swift */; };
 		F38A0E202377994800294E27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F38A0E1F2377994800294E27 /* Assets.xcassets */; };
@@ -27,9 +30,13 @@
 		F38A0EA2237956C400294E27 /* TimestampBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A0EA1237956C400294E27 /* TimestampBadge.swift */; };
 		F38A0EA423795F2100294E27 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A0EA323795F2100294E27 /* DateFormatters.swift */; };
 		F398F9F3237AAE7B00A82FF8 /* BitcoinPrice+UpdatedAgoText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F398F9F2237AAE7B00A82FF8 /* BitcoinPrice+UpdatedAgoText.swift */; };
+		F3F60D92237F5ADF00FEFBD9 /* SettingsContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F60D91237F5ADF00FEFBD9 /* SettingsContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F3628BE0237FA59F00770348 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		F3628BE2237FBA2E00770348 /* ShitcoinFilterSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShitcoinFilterSelectionView.swift; sourceTree = "<group>"; };
+		F3628BE423808F3B00770348 /* ShitcoinFilterListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShitcoinFilterListItem.swift; sourceTree = "<group>"; };
 		F38A0E162377994700294E27 /* BitcoinAverageAPIFetcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitcoinAverageAPIFetcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F38A0E192377994700294E27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F38A0E1B2377994700294E27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +57,7 @@
 		F38A0EA1237956C400294E27 /* TimestampBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimestampBadge.swift; sourceTree = "<group>"; };
 		F38A0EA323795F2100294E27 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
 		F398F9F2237AAE7B00A82FF8 /* BitcoinPrice+UpdatedAgoText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BitcoinPrice+UpdatedAgoText.swift"; sourceTree = "<group>"; };
+		F3F60D91237F5ADF00FEFBD9 /* SettingsContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				F38A0E512377F2FE00294E27 /* SettingsView.swift */,
+				F3628BE0237FA59F00770348 /* SettingsViewModel.swift */,
+				F3F60D91237F5ADF00FEFBD9 /* SettingsContainerView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -155,6 +165,7 @@
 		F38A0E3223779DB500294E27 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				F3F60D93237F5C8400FEFBD9 /* Models */,
 				F38A0E372377A09D00294E27 /* State */,
 			);
 			path = Data;
@@ -207,6 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				F38A0EA1237956C400294E27 /* TimestampBadge.swift */,
+				F3628BE2237FBA2E00770348 /* ShitcoinFilterSelectionView.swift */,
+				F3628BE423808F3B00770348 /* ShitcoinFilterListItem.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -217,6 +230,13 @@
 				F398F9F2237AAE7B00A82FF8 /* BitcoinPrice+UpdatedAgoText.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F3F60D93237F5C8400FEFBD9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,8 +323,11 @@
 				F38A0E3F2377A1A000294E27 /* PricesState.swift in Sources */,
 				F38A0E502377EC2C00294E27 /* Dependencies.swift in Sources */,
 				F38A0E1C2377994700294E27 /* SceneDelegate.swift in Sources */,
+				F3F60D92237F5ADF00FEFBD9 /* SettingsContainerView.swift in Sources */,
 				F38A0E522377F2FE00294E27 /* SettingsView.swift in Sources */,
+				F3628BE523808F3B00770348 /* ShitcoinFilterListItem.swift in Sources */,
 				F38A0EA423795F2100294E27 /* DateFormatters.swift in Sources */,
+				F3628BE1237FA59F00770348 /* SettingsViewModel.swift in Sources */,
 				F38A0EA2237956C400294E27 /* TimestampBadge.swift in Sources */,
 				F38A0E9F23794FAA00294E27 /* NumberFormatters.swift in Sources */,
 				F38A0E562377F6AB00294E27 /* PricesListViewModel.swift in Sources */,
@@ -312,6 +335,7 @@
 				F38A0E3523779E0800294E27 /* PricesListContainerView.swift in Sources */,
 				F38A0E3D2377A10E00294E27 /* SampleData.swift in Sources */,
 				F398F9F3237AAE7B00A82FF8 /* BitcoinPrice+UpdatedAgoText.swift in Sources */,
+				F3628BE3237FBA2E00770348 /* ShitcoinFilterSelectionView.swift in Sources */,
 				F38A0E3A2377A0DE00294E27 /* AppState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
