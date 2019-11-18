@@ -32,7 +32,9 @@ extension PricesListView {
                 .padding(.leading)
             
             List {
-                Section(header: Text("Filter: All")) {
+                Section(
+//                    header: Text("Filter: All")
+                ) {
                     ForEach(viewModel.displayedPrices) { price in
                         VStack(spacing: 8) {
                             

@@ -28,12 +28,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let store = AppStore(initialState: AppState(), appReducer: appReducer)
 
             let settingsViewModel = SettingsViewModel(store: store)
+            let pricesListViewModel = PricesListViewModel(store: store)
             
             // Create the SwiftUI view that provides the window contents.
             let entryView = PricesListContainerView()
                 .accentColor(.purple)
                 .environmentObject(store)
                 .environmentObject(settingsViewModel)
+                .environmentObject(pricesListViewModel)
 
             window.rootViewController = UIHostingController(rootView: entryView)
             self.window = window

@@ -10,6 +10,7 @@ import SwiftUI
 
 
 struct SettingsContainerView: View {
+    @EnvironmentObject private var store: AppStore
     @State private var isShowingFilterPicker = false
 }
 
@@ -23,6 +24,7 @@ extension SettingsContainerView {
                 .navigationBarItems(trailing: addFilterButton)
                 .sheet(isPresented: $isShowingFilterPicker) {
                     ShitcoinFilterSelectionView()
+                        .environmentObject(self.store)
                 }
         }
     }

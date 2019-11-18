@@ -14,13 +14,4 @@ enum Dependencies {
     static let bitcoinAverageAPIService = BitcoinAverageAPIService(
         queue: DispatchQueue(label: "BitcoinAverageAPI", qos: .userInitiated, attributes: [.concurrent])
     )
-    
-    
-    static let supportedShitcoins = [
-        Shitcoin.eth,
-        Shitcoin.usd,
-        Shitcoin.usdc,
-        Shitcoin.dcr,
-        Shitcoin.link,
-    ]
 }

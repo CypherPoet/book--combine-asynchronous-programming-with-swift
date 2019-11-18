@@ -19,14 +19,15 @@ struct PricesState {
 
 
 enum PricesSideEffect: SideEffect {
-    case fetchLatestIndexPrices
+    case fetchLatestIndexPrices(for: [Shitcoin])
     
     
     func mapToAction() -> AnyPublisher<AppAction, Never> {
         switch self {
-        case .fetchLatestIndexPrices:
+        case let .fetchLatestIndexPrices(filteredShitcoins):
             return Dependencies.bitcoinAverageAPIService
-                .tickerDataList(for: Dependencies.supportedShitcoins)
+                .tickerDataList(for: filteredShitcoins)
+                .print("mapToAction")
                 .receive(on: DispatchQueue.main)
                 .map { prices in
                     AppAction.prices(.setPriceIndexData(prices))
@@ -34,6 +35,7 @@ enum PricesSideEffect: SideEffect {
                 .catch { error in
                     Just(AppAction.prices(.fetchLatestIndexPrices(error: error)))
                 }
+                .timeout(.seconds(4), scheduler: DispatchQueue.main)
                 .eraseToAnyPublisher()
         }
     }

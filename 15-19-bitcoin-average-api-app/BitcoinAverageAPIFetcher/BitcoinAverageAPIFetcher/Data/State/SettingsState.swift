@@ -13,7 +13,7 @@ import SatoshiVSKit
 
 
 struct SettingsState {
-    var filteredShitcoins: [Shitcoin] = [.etb, .link, .usd]
+    var filteredShitcoins: [Shitcoin] = []
 }
 
 

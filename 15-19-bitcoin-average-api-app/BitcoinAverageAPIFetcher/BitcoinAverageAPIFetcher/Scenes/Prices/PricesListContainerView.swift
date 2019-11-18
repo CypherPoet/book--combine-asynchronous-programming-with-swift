@@ -7,11 +7,13 @@
 //
 
 import SwiftUI
+import SatoshiVSKit
 
 
 struct PricesListContainerView: View {
     @EnvironmentObject private var store: AppStore
     @EnvironmentObject private var settingsViewModel: SettingsViewModel
+    @EnvironmentObject private var pricesListViewModel: PricesListViewModel
     
     @State private var isShowingSettingsSheet = false
 }
@@ -23,7 +25,7 @@ extension PricesListContainerView {
     var body: some View {
         NavigationView {
             PricesListView(
-                viewModel: PricesListViewModel(store: store)
+                viewModel: pricesListViewModel
             )
                 .navigationBarTitle("Prices Index")
                 .navigationBarItems(trailing: settingsButton)
@@ -31,6 +33,7 @@ extension PricesListContainerView {
         }
         .sheet(isPresented: $isShowingSettingsSheet) {
             SettingsContainerView()
+                .environmentObject(self.store)
                 .environmentObject(self.settingsViewModel)
         }
     }
@@ -39,6 +42,7 @@ extension PricesListContainerView {
 
 // MARK: - Computeds
 extension PricesListContainerView {
+    var filteredShitcoins: [Shitcoin] { store.state.settingsState.filteredShitcoins }
 }
 
 
@@ -62,7 +66,10 @@ extension PricesListContainerView {
 private extension PricesListContainerView {
 
     func fetchPrices() {
-        store.send(PricesSideEffect.fetchLatestIndexPrices)
+//        let shitcoins = filteredShitcoins.isEmpty ? Shitcoin.allCases : filteredShitcoins
+        let shitcoins: [Shitcoin] = [.link, .ada, .aion]
+        
+        store.send(PricesSideEffect.fetchLatestIndexPrices(for: shitcoins))
     }
 }
 
@@ -75,6 +82,7 @@ struct PricesListContainerView_Previews: PreviewProvider {
         PricesListContainerView()
             .environmentObject(SampleStore.default)
             .environmentObject(SettingsViewModel(store: SampleStore.default))
+            .environmentObject(PricesListViewModel(store: SampleStore.default))
     }
     
 }
