@@ -12,6 +12,9 @@ import SatoshiVSKit
 
 struct PricesListContainerView: View {
     @EnvironmentObject private var store: AppStore
+    
+    // 📝 NOTE: I'm leaning towards views being resonsible for initializing their own view models
+    // during their own `init` function.
     @EnvironmentObject private var settingsViewModel: SettingsViewModel
     @EnvironmentObject private var pricesListViewModel: PricesListViewModel
     
