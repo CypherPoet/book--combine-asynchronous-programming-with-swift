@@ -18,7 +18,7 @@ class Player {
 
 
 demo(describing: "assign") {
-    var player = Player()
+    let player = Player()
 
     print("Player name before assignment: \(player.name)")
     

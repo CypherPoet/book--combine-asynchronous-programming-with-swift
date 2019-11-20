@@ -3,5 +3,6 @@
     <pages>
         <page name='Never'/>
         <page name='Assign'/>
+        <page name='AssertNoFailure'/>
     </pages>
 </playground>
