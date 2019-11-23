@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
+   <Group
+      location = "container:"
+      name = "17 - Schedulers">
+   </Group>
    <Group
       location = "container:"
       name = "16 - Error Handling ">
@@ -11,6 +18,10 @@
    <Group
       location = "container:"
       name = "Book Source">
+      <Group
+         location = "container:"
+         name = "Chapter 17">
+      </Group>
       <Group
          location = "container:"
          name = "Chapter 16">

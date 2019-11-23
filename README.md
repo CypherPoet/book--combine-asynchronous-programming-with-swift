@@ -25,3 +25,9 @@ _Projects, playgrounds, and other materials made while following along with the 
 
 
 - [Chapters 15-19: Bulding an App with SwiftUI and Combine Networking](./15-19-bitcoin-average-api-app)
+
+
+- [Chapters 16: Error Handling](./16-error-handling)
+
+
+- [Chapters 17: Schedulers](./17-schedulers)

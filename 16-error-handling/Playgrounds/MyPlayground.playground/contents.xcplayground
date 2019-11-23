@@ -4,5 +4,7 @@
         <page name='Never'/>
         <page name='Assign'/>
         <page name='AssertNoFailure'/>
+        <page name='try* Operators'/>
+        <page name='Catching and Retrying'/>
     </pages>
 </playground>
