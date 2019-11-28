@@ -7,6 +7,9 @@
    <Group
       location = "container:"
       name = "17 - Schedulers">
+      <FileRef
+         location = "group:17-schedulers/Playgrounds/MyPlayground.playground">
+      </FileRef>
    </Group>
    <Group
       location = "container:"
@@ -20,7 +23,10 @@
       name = "Book Source">
       <Group
          location = "container:"
-         name = "Chapter 17">
+         name = "Chapter 14">
+         <FileRef
+            location = "group:TEMP/BookSource-V-1/14-project-2/starter/API.playground">
+         </FileRef>
       </Group>
       <Group
          location = "container:"
@@ -34,9 +40,15 @@
       </Group>
       <Group
          location = "container:"
-         name = "Chapter 14">
+         name = "Chapter 17">
          <FileRef
-            location = "group:TEMP/BookSource-V-1/14-project-2/starter/API.playground">
+            location = "group:private/BookSource_v1_0_1/17-combine-schedulers/challenge">
+         </FileRef>
+         <FileRef
+            location = "group:private/BookSource_v1_0_1/17-combine-schedulers/Final.playground">
+         </FileRef>
+         <FileRef
+            location = "group:private/BookSource_v1_0_1/17-combine-schedulers/Starter.playground">
          </FileRef>
       </Group>
    </Group>
