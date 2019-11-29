@@ -11,9 +11,6 @@ import SwiftUI
 
 var subscriptions = Set<AnyCancellable>()
 
-let computationPublisher = Publishers.ExpensiveComputation(duration: 3)
-let startingThreadNumber = Thread.current.number
-
 
 let customSerialQueue = DispatchQueue(label: "Serial queue")
 let sourceQueue = DispatchQueue.main

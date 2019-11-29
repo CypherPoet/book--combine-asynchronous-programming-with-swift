@@ -11,17 +11,6 @@ import SwiftUI
 
 var subscriptions = Set<AnyCancellable>()
 
-let computationPublisher = Publishers.ExpensiveComputation(duration: 3)
-let startingThreadNumber = Thread.current.number
-
-let incrementer = Timer
-    .publish(every: 1.0, on: .main, in: .common)
-    .autoconnect()
-    .scan(0) { counter, _ in
-        counter + 1
-    }
-
-
 
 //: `OperationQueue` uses the `Dispatch` framework (hence `DispatchQueue`) to execute operations.
 //: This means that it doesn‘t guarantee it’ll use the same underlying thread for each delivered value.

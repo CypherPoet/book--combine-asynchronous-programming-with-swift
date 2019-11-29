@@ -41,14 +41,21 @@
       <Group
          location = "container:"
          name = "Chapter 17">
+         <Group
+            location = "container:"
+            name = "Challenges">
+            <FileRef
+               location = "group:/Users/briansipple/lxda/swift/Combine/book--combine-asynchronous-programming-with-swift/TEMP/BookSource-V_1_0_2/17-combine-schedulers/challenge/challenge2/Challenge 2.playground">
+            </FileRef>
+            <FileRef
+               location = "group:/Users/briansipple/lxda/swift/Combine/book--combine-asynchronous-programming-with-swift/TEMP/BookSource-V_1_0_2/17-combine-schedulers/challenge/challenge1/Challenge 1.playground">
+            </FileRef>
+         </Group>
          <FileRef
-            location = "group:private/BookSource_v1_0_1/17-combine-schedulers/challenge">
+            location = "group:TEMP/BookSource-V_1_0_2/17-combine-schedulers/Final.playground">
          </FileRef>
          <FileRef
-            location = "group:private/BookSource_v1_0_1/17-combine-schedulers/Final.playground">
-         </FileRef>
-         <FileRef
-            location = "group:private/BookSource_v1_0_1/17-combine-schedulers/Starter.playground">
+            location = "group:TEMP/BookSource-V_1_0_2/17-combine-schedulers/Starter.playground">
          </FileRef>
       </Group>
    </Group>

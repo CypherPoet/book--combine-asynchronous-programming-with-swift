@@ -5,5 +5,8 @@
         <page name='ImmediateScheduler'/>
         <page name='RunLoop'/>
         <page name='DispatchQueue'/>
+        <page name='OperationQueue'/>
+        <page name='Challenge 1 - Stop the Timer'/>
+        <page name='Challenge 2 - Discover Optimization'/>
     </pages>
 </playground>
