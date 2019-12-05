@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "container:"
+      name = "18 - Custom Publishers &amp; Handling Backpressure">
+      <FileRef
+         location = "group:18-custom-publishers-and-handling-backpressure/Playgrounds/MyPlayground.playground">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:README.md">
    </FileRef>
@@ -21,6 +28,16 @@
    <Group
       location = "container:"
       name = "Book Source">
+      <Group
+         location = "container:"
+         name = "Chapter 18">
+         <FileRef
+            location = "group:TEMP/BookSource-V_1_0_2/18-custom-publishers-and-handling-backpressure/Starter.playground">
+         </FileRef>
+         <FileRef
+            location = "group:TEMP/BookSource-V_1_0_2/18-custom-publishers-and-handling-backpressure/Final.playground">
+         </FileRef>
+      </Group>
       <Group
          location = "container:"
          name = "Chapter 14">
