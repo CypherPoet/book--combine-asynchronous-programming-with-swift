@@ -34,5 +34,4 @@ demo(describing: "Using our custom `unwrap` operator") {
         .store(in: &subscriptions)
 }
 
-
 //: [Next](@next)
