@@ -30,16 +30,6 @@
       name = "Book Source">
       <Group
          location = "container:"
-         name = "Chapter 18">
-         <FileRef
-            location = "group:TEMP/BookSource-V_1_0_2/18-custom-publishers-and-handling-backpressure/Starter.playground">
-         </FileRef>
-         <FileRef
-            location = "group:TEMP/BookSource-V_1_0_2/18-custom-publishers-and-handling-backpressure/Final.playground">
-         </FileRef>
-      </Group>
-      <Group
-         location = "container:"
          name = "Chapter 14">
          <FileRef
             location = "group:TEMP/BookSource-V-1/14-project-2/starter/API.playground">
@@ -73,6 +63,16 @@
          </FileRef>
          <FileRef
             location = "group:TEMP/BookSource-V_1_0_2/17-combine-schedulers/Starter.playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Chapter 18">
+         <FileRef
+            location = "group:TEMP/BookSource-V_1_0_2/18-custom-publishers-and-handling-backpressure/Starter.playground">
+         </FileRef>
+         <FileRef
+            location = "group:TEMP/BookSource-V_1_0_2/18-custom-publishers-and-handling-backpressure/Final.playground">
          </FileRef>
       </Group>
    </Group>

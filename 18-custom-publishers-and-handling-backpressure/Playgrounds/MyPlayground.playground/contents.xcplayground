@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios'/>
+<playground version='6.0' target-platform='ios'>
+    <pages>
+        <page name='DispatchTimer Publisher'/>
+        <page name='ShareReplay Operator'/>
+        <page name='Unwrap Operator'/>
+        <page name='PausableSink'/>
+    </pages>
+</playground>
