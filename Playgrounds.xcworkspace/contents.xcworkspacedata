@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
    <Group
       location = "container:"
       name = "18 - Custom Publishers &amp; Handling Backpressure">
@@ -8,9 +11,6 @@
          location = "group:18-custom-publishers-and-handling-backpressure/Playgrounds/MyPlayground.playground">
       </FileRef>
    </Group>
-   <FileRef
-      location = "group:README.md">
-   </FileRef>
    <Group
       location = "container:"
       name = "17 - Schedulers">
