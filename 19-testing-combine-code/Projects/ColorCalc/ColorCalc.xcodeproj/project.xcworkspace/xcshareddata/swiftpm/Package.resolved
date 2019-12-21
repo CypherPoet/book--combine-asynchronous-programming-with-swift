@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CypherPoetCombineKit",
+        "repositoryURL": "https://github.com/CypherPoet/CypherPoetCombineKit.git",
+        "state": {
+          "branch": null,
+          "revision": "72bf0a79055af30e2975bcf4e0f3c6b5d51fe429",
+          "version": "0.0.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
