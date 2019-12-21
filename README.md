@@ -34,3 +34,6 @@ _Projects, playgrounds, and other materials made while following along with the 
 
 
 - [Chapter 18: Custom Publishers & Handling Backpressure](./18-custom-publishers-and-handling-backpressure)
+
+
+- [Chapter 19: Testing Combine Code](./19-testing-combine-code)
