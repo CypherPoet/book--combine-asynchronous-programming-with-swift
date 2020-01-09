@@ -22,6 +22,7 @@
 		D2E8060F2310448F00E68452 /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E8060E2310448F00E68452 /* CalculatorButton.swift */; };
 		F314BE6E23AEB81300453491 /* CypherPoetCombineKit in Frameworks */ = {isa = PBXBuildFile; productRef = F314BE6D23AEB81300453491 /* CypherPoetCombineKit */; };
 		F314BE7023AEB83B00453491 /* CombineOperatorsTests+ShareReplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F314BE6F23AEB83B00453491 /* CombineOperatorsTests+ShareReplay.swift */; };
+		F3203B7223C6CF4200265268 /* CalculatorViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3203B7123C6CF4200265268 /* CalculatorViewModelTests.swift */; };
 		F325930C23AD29F800F9BADA /* CombineOperatorsTests+Collect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F325930B23AD29F800F9BADA /* CombineOperatorsTests+Collect.swift */; };
 		F325930E23AD2A6700F9BADA /* CombineOperatorsTests+FlatMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F325930D23AD2A6700F9BADA /* CombineOperatorsTests+FlatMap.swift */; };
 		F370228A23AEA50200BF4F80 /* CombineOperatorsTests+TimerPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F370228923AEA50200BF4F80 /* CombineOperatorsTests+TimerPublisher.swift */; };
@@ -56,6 +57,7 @@
 		D2E806052310439600E68452 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2E8060E2310448F00E68452 /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
 		F314BE6F23AEB83B00453491 /* CombineOperatorsTests+ShareReplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CombineOperatorsTests+ShareReplay.swift"; sourceTree = "<group>"; };
+		F3203B7123C6CF4200265268 /* CalculatorViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModelTests.swift; sourceTree = "<group>"; };
 		F325930B23AD29F800F9BADA /* CombineOperatorsTests+Collect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CombineOperatorsTests+Collect.swift"; sourceTree = "<group>"; };
 		F325930D23AD2A6700F9BADA /* CombineOperatorsTests+FlatMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CombineOperatorsTests+FlatMap.swift"; sourceTree = "<group>"; };
 		F370228923AEA50200BF4F80 /* CombineOperatorsTests+TimerPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CombineOperatorsTests+TimerPublisher.swift"; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			children = (
 				D2E806052310439600E68452 /* Info.plist */,
 				D2E806032310439600E68452 /* ColorCalcTests.swift */,
+				F3203B7123C6CF4200265268 /* CalculatorViewModelTests.swift */,
 				F325930A23AD29CF00F9BADA /*  Combine Operators */,
 			);
 			path = ColorCalcTests;
@@ -319,6 +322,7 @@
 			files = (
 				D2E806042310439600E68452 /* ColorCalcTests.swift in Sources */,
 				D254421423145D2F00D1DF62 /* CombineOperatorsTests.swift in Sources */,
+				F3203B7223C6CF4200265268 /* CalculatorViewModelTests.swift in Sources */,
 				F370228A23AEA50200BF4F80 /* CombineOperatorsTests+TimerPublisher.swift in Sources */,
 				F325930C23AD29F800F9BADA /* CombineOperatorsTests+Collect.swift in Sources */,
 				F314BE7023AEB83B00453491 /* CombineOperatorsTests+ShareReplay.swift in Sources */,
