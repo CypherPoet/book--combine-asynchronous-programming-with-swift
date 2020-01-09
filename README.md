@@ -11,7 +11,7 @@ _Projects, playgrounds, and other materials made while following along with the 
     - Dynamically Adjusting Demand
     - Type Erasure
     - **🥅 Challenge:** Create a Blackjack Card Dealer
-    
+
 
 - [Chapter 8: Combine in Practice: Building a Photo Collage App](./08-photo-collage-app)
     - Using Combine publishers in custom views.
@@ -37,3 +37,6 @@ _Projects, playgrounds, and other materials made while following along with the 
 
 
 - [Chapter 19: Testing Combine Code](./19-testing-combine-code)
+
+
+- [Chapter 20: Building A Complete App with Combine, SwiftUI, and CoreData](./20-building-a-complete-app)
