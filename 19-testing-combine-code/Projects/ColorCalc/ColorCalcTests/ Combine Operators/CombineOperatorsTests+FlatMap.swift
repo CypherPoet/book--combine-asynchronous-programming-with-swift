@@ -23,27 +23,15 @@ extension CombineOperatorsTests {
         
         let fibs = [1, 1, 2, 3, 5, 8, 13, 21]
         let eventCount = 4
-//        let expectation = XCTestExpectation(description: "Publisher should complete successfully.")
         let expectedValues = Array(fibs.prefix(upTo: eventCount))
         
         var receivedValues: [Int] = []
-        
-//        let receiveCompletion: ((Subscribers.Completion<EventSource.Failure>) -> Void) =  { completion in
-//            switch completion {
-//            case .finished:
-//                XCTAssertEqual(receivedValues, expectedValues)
-//                expectation.fulfill()
-//            case .failure:
-//                XCTFail()
-//            }
-//        }
         
         numberStream
             .flatMap(maxPublishers: .max(2), { subject in
                 subject
             })
             .sink(
-//                receiveCompletion: receiveCompletion,
                 receiveValue: { number in
                     receivedValues.append(number)
                 }

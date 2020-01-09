@@ -41,7 +41,7 @@ extension CombineOperatorsTests {
                 receiveCompletion: { completion in
                     switch completion {
                     case .finished:
-//                        XCTAssertEqual(receivedTimeIntervals, expectedTimeIntervals)
+                        XCTAssertEqual(receivedTimeIntervals, expectedTimeIntervals)
                         expectation.fulfill()
                     case .failure:
                         XCTFail()
@@ -55,9 +55,6 @@ extension CombineOperatorsTests {
             )
             .store(in: &subscriptions)
         
-        
-        XCTAssertEqual(receivedTimeIntervals, expectedTimeIntervals)
         wait(for: [expectation], timeout: 2.0)
-
     }
 }

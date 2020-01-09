@@ -87,4 +87,57 @@ extension CalculatorViewModelTests {
         
         XCTAssertEqual(actual, expected)
     }
+    
+    
+    func test_receivingWhiteColorAfterBadDataIsInput() {
+        let expected = Color.white
+        var actual = Color.clear
+        
+        viewModel.$color
+            .sink(receiveValue: { actual = $0 })
+            .store(in: &subscriptions)
+        
+        viewModel.hexText = "Not a hex value"
+        
+        XCTAssertEqual(actual, expected)
+    }
+    
+    
+    func test_clearingTheHextTextAfterProcessingClearInput() {
+        let expected = "#"
+        var actual = "🦄"
+        
+        
+        viewModel.$hexText
+            .dropFirst()
+            .sink(receiveValue: { actual = $0 })
+            .store(in: &subscriptions)
+        
+        
+        viewModel.process(CalculatorViewModel.Constant.clear)
+        
+        XCTAssertEqual(actual, expected)
+    }
+    
+    
+    func test_receivingTheCorrectRGBOValueAfterProcessingHexText() {
+//        let expected = Color(
+//            .displayP3,
+//            red: 0,
+//            green: 102,
+//            blue: 54,
+//            opacity: 170
+//        )
+        let expected = "0, 102, 54, 170"
+        var actual = ""
+        
+        
+        viewModel.$rgboText
+            .sink(receiveValue: { actual = $0 })
+            .store(in: &subscriptions)
+        
+        viewModel.hexText = "#006636AA"
+        
+        XCTAssertEqual(actual, expected)
+    }
 }
