@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CypherPoetNetStack",
+        "repositoryURL": "https://github.com/CypherPoet/CypherPoetNetStack.git",
+        "state": {
+          "branch": null,
+          "revision": "b5dbd717cd51726ccba1041ee5981680aaeff95f",
+          "version": "0.0.28"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -31,43 +31,43 @@ import Combine
 import SwiftUI
 
 public final class JokesViewModel {
-  public enum DecisionState {
-    case disliked, undecided, liked
-  }
-  
-  private static let decoder = JSONDecoder()
-  
-  
-  
-  private var subscriptions = Set<AnyCancellable>()
-  private var jokeSubscriptions = Set<AnyCancellable>()
-  
-  public init(jokesService: JokeServiceDataPublisher? = nil,
-              translationService: TranslationServiceDataPublisher? = nil) {
+    public enum DecisionState {
+        case disliked, undecided, liked
+    }
     
-  }
-  
-  public func fetchJoke() {
+    private static let decoder = JSONDecoder()
     
-  }
-  
-  func fetchTranslation(for joke: Joke, to languageCode: String)
-    -> AnyPublisher<Joke, Never> {
-      return Empty().eraseToAnyPublisher()
-  }
-  
-  public func updateBackgroundColorForTranslation(_ translation: Double) {
     
-  }
-  
-  public func updateDecisionStateForTranslation(
-  _ translation: Double,
-  andPredictedEndLocationX x: CGFloat,
-  inBounds bounds: CGRect) {
     
-  }
-  
-  public func reset() {
+    private var subscriptions = Set<AnyCancellable>()
+    private var jokeSubscriptions = Set<AnyCancellable>()
     
-  }
+    public init(jokesService: JokeServiceDataPublisher? = nil,
+                translationService: TranslationServiceDataPublisher? = nil) {
+        
+    }
+    
+    public func fetchJoke() {
+        
+    }
+    
+    func fetchTranslation(for joke: Joke, to languageCode: String)
+        -> AnyPublisher<Joke, Never> {
+            return Empty().eraseToAnyPublisher()
+    }
+    
+    public func updateBackgroundColorForTranslation(_ translation: Double) {
+        
+    }
+    
+    public func updateDecisionStateForTranslation(
+        _ translation: Double,
+        andPredictedEndLocationX x: CGFloat,
+        inBounds bounds: CGRect) {
+        
+    }
+    
+    public func reset() {
+        
+    }
 }

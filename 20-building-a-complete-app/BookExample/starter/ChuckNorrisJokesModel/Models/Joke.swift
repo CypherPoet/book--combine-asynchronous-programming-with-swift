@@ -29,58 +29,58 @@
 import Foundation
 
 public struct Joke: Codable, Identifiable, Equatable {
-  enum CodingKeys: String, CodingKey {
-    case id, value, categories
-  }
-  
-  static let error = Joke(
-    id: "error",
-    value: "Houston we have a problem — no joke!\n\nCheck your Internet connection and try again.",
-    categories: [],
-    languageCode: "en",
-    translationLanguageCode: "es",
-    translatedValue: "Houston tenemos un problema-no es broma!\n\nCompruebe su conexión a Internet y vuelva a intentarlo."
-  )
-  
-  public static let starter: Joke = {
-    guard let url = Bundle.main.url(forResource: "SampleJoke", withExtension: "json"),
-      var data = try? Data(contentsOf: url),
-      let joke = try? JSONDecoder().decode(Joke.self, from: data)
-      else { return error }
+    enum CodingKeys: String, CodingKey {
+        case id, value, categories
+    }
     
-    return Joke(
-      id: joke.id,
-      value: joke.value,
-      categories: joke.categories,
-      languageCode: joke.languageCode,
-      translationLanguageCode: "es",
-      translatedValue: "Chuck Norris escribe un código que se auto-capacita."
+    static let error = Joke(
+        id: "error",
+        value: "Houston we have a problem — no joke!\n\nCheck your Internet connection and try again.",
+        categories: [],
+        languageCode: "en",
+        translationLanguageCode: "es",
+        translatedValue: "Houston tenemos un problema-no es broma!\n\nCompruebe su conexión a Internet y vuelva a intentarlo."
     )
-  }()
-  
-  public let id: String
-  public let value: String
-  public let categories: [String]
-  public let languageCode: String
-  public let translationLanguageCode: String
-  public let translatedValue: String
-  
-  public init(id: String, value: String, categories: [String], languageCode: String = "en", translationLanguageCode: String = "en", translatedValue: String? = nil) {
-    self.id = id
-    self.value = value
-    self.categories = categories
-    self.languageCode = languageCode
-    self.translationLanguageCode = translationLanguageCode
-    self.translatedValue = translatedValue ?? value
-  }
-  
-  public init(from decoder: Decoder) throws {
-    let container = try decoder.container(keyedBy: CodingKeys.self)
-    id = try container.decode(String.self, forKey: .id)
-    value = try container.decode(String.self, forKey: .value)
-    categories = try container.decode([String].self, forKey: .categories)
-    languageCode = "en"
-    translationLanguageCode = ""
-    translatedValue = ""
-  }
+    
+    public static let starter: Joke = {
+        guard let url = Bundle.main.url(forResource: "SampleJoke", withExtension: "json"),
+            var data = try? Data(contentsOf: url),
+            let joke = try? JSONDecoder().decode(Joke.self, from: data)
+            else { return error }
+        
+        return Joke(
+            id: joke.id,
+            value: joke.value,
+            categories: joke.categories,
+            languageCode: joke.languageCode,
+            translationLanguageCode: "es",
+            translatedValue: "Chuck Norris escribe un código que se auto-capacita."
+        )
+    }()
+    
+    public let id: String
+    public let value: String
+    public let categories: [String]
+    public let languageCode: String
+    public let translationLanguageCode: String
+    public let translatedValue: String
+    
+    public init(id: String, value: String, categories: [String], languageCode: String = "en", translationLanguageCode: String = "en", translatedValue: String? = nil) {
+        self.id = id
+        self.value = value
+        self.categories = categories
+        self.languageCode = languageCode
+        self.translationLanguageCode = translationLanguageCode
+        self.translatedValue = translatedValue ?? value
+    }
+    
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try container.decode(String.self, forKey: .id)
+        value = try container.decode(String.self, forKey: .value)
+        categories = try container.decode([String].self, forKey: .categories)
+        languageCode = "en"
+        translationLanguageCode = ""
+        translatedValue = ""
+    }
 }
