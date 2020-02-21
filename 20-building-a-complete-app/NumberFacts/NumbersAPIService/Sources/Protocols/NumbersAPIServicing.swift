@@ -96,17 +96,23 @@ extension NumbersAPIServicing {
     }
     
     
-    public func fetchRandomDateFact(using decoder: JSONDecoder) -> AnyPublisher<NumberFact, NumbersAPIServiceError> {
+    public func fetchRandomDateFact(
+        using decoder: JSONDecoder = NumberFact.Decoder.default
+    ) -> AnyPublisher<NumberFact, NumbersAPIServiceError> {
         fetchNumberFact(at: Endpoint.NumbersAPI.randomDateFact, using: decoder)
     }
     
     
-    public func fetchRandomNumberTrivia(using decoder: JSONDecoder) -> AnyPublisher<NumberFact, NumbersAPIServiceError> {
+    public func fetchRandomNumberTrivia(
+        using decoder: JSONDecoder = NumberFact.Decoder.default
+    ) -> AnyPublisher<NumberFact, NumbersAPIServiceError> {
         fetchNumberFact(at: Endpoint.NumbersAPI.randomTriviaFact, using: decoder)
     }
     
     
-    public func fetchRandomMathFact(using decoder: JSONDecoder) -> AnyPublisher<NumberFact, NumbersAPIServiceError> {
+    public func fetchRandomMathFact(
+        using decoder: JSONDecoder = NumberFact.Decoder.default
+    ) -> AnyPublisher<NumberFact, NumbersAPIServiceError> {
         fetchNumberFact(at: Endpoint.NumbersAPI.randomMathFact, using: decoder)
     }
 }

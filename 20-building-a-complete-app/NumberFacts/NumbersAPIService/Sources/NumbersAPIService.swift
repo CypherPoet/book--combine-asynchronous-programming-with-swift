@@ -15,7 +15,7 @@ public final class NumbersAPIService {
     public var session: URLSession
     public var apiQueue: DispatchQueue
     
-    init(
+    public init(
         session: URLSession = .shared,
         queue: DispatchQueue = DispatchQueue(label: "NumbersAPIService", qos: .userInitiated)
     ) {

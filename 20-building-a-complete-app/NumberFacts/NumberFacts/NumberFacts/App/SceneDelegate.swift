@@ -19,17 +19,31 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
-        // Get the managed object context from the shared persistent container.
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
-        // Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
-        // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
-        let contentView = ContentView().environment(\.managedObjectContext, context)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
+
+            // Get the managed object context from the shared persistent container.
+            let context = CurrentApp.coreDataManager.mainContext
+            
+            
+//            #if targetEnvironment(simulator)
+//            PreviewData.setupSimulatorPreviewData(in: context)
+//            #endif
+            
+            
+            let store = AppStore(initialState: .init(), appReducer: appReducer)
+                
+            // Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
+            // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
+            let entryView = RootView()
+                .environment(\.managedObjectContext, context)
+                .environmentObject(store)
+                .accentColor(.purple)
+
+            window.rootViewController = UIHostingController(rootView: entryView)
+
             self.window = window
             window.makeKeyAndVisible()
         }
@@ -63,9 +77,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
 
         // Save changes in the application's managed object context when the application transitions to the background.
-        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+        CurrentApp.coreDataManager.saveContexts()
     }
-
-
 }
 

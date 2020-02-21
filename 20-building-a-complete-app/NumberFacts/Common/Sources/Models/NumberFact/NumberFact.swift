@@ -6,8 +6,8 @@ public struct NumberFact {
     public var category: NumberFact.Category
     public var text: String
     
-    public var languageCode: String
-    public var translationLanguageCode: String
+    public var currentLanguage: Language
+    public var translationLanguage: Language
     
     public var translatedText: String?
     
@@ -17,15 +17,15 @@ public struct NumberFact {
         number: Int,
         category: NumberFact.Category,
         text: String,
-        languageCode: String = Locale.current.languageCode ?? "en",
-        translationLanguageCode: String = "es",
+        currentLanguage: Language = .english,
+        translationLanguage: Language = .spanish,
         translatedText: String? = nil
     ) {
         self.number = number
         self.category = category
         self.text = text
-        self.languageCode = languageCode
-        self.translationLanguageCode = translationLanguageCode
+        self.currentLanguage = currentLanguage
+        self.translationLanguage = translationLanguage
         self.translatedText = translatedText
     }
 }
