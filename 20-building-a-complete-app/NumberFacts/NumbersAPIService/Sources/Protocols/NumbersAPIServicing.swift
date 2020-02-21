@@ -2,37 +2,31 @@ import Foundation
 import Combine
 import Common
 import CypherPoetNetStack
+import CoreData
 
 
 public protocol NumbersAPIServicing {
+    typealias NumberFactPayload = (text: String, number: Int, category: NumberFact.Category)
+    
     var session: URLSession { get }
     var apiQueue: DispatchQueue { get }
     
     
-    func fetchNumberFact(
-        at endpoint: Endpoint,
-        using decoder: JSONDecoder
-    ) -> AnyPublisher<NumberFact, NumbersAPIServiceError>
+    func numberFact(
+        fromPayload payload: NumberFactPayload,
+        in context: NSManagedObjectContext
+    ) -> AnyPublisher<NumberFact, Never>
     
     
-    func fetchRandomYearFact(
-        using decoder: JSONDecoder
-    ) -> AnyPublisher<NumberFact, NumbersAPIServiceError>
-        
-    
-    func fetchRandomDateFact(
-        using decoder: JSONDecoder
-    ) -> AnyPublisher<NumberFact, NumbersAPIServiceError>
+    func fetchNumberFactPayload(
+        at endpoint: Endpoint
+    ) -> AnyPublisher<NumberFactPayload, NumbersAPIServiceError>
     
     
-    func fetchRandomNumberTrivia(
-        using decoder: JSONDecoder
-    ) -> AnyPublisher<NumberFact, NumbersAPIServiceError>
-    
-    
-    func fetchRandomMathFact(
-        using decoder: JSONDecoder
-    ) -> AnyPublisher<NumberFact, NumbersAPIServiceError>
+    func fetchRandomYearFactPayload() -> AnyPublisher<NumberFactPayload, NumbersAPIServiceError>
+    func fetchRandomDateFactPayload() -> AnyPublisher<NumberFactPayload, NumbersAPIServiceError>
+    func fetchRandomNumberTriviaPayload() -> AnyPublisher<NumberFactPayload, NumbersAPIServiceError>
+    func fetchRandomMathFactPayload() -> AnyPublisher<NumberFactPayload, NumbersAPIServiceError>
 }
 
 
@@ -40,10 +34,23 @@ public protocol NumbersAPIServicing {
 // MARK: - Default Implementation
 extension NumbersAPIServicing {
     
-    public func fetchNumberFact(
-        at endpoint: Endpoint,
-        using decoder: JSONDecoder
-    ) -> AnyPublisher<NumberFact, NumbersAPIServiceError> {
+    public func numberFact(
+        fromPayload payload: NumberFactPayload,
+        in context: NSManagedObjectContext
+    ) -> AnyPublisher<NumberFact, Never> {
+        let numberFact = NumberFact(context: context)
+        
+        numberFact.number = Int64(payload.number)
+        numberFact.text = payload.text
+        numberFact.category = payload.category
+        
+        return Just(numberFact).eraseToAnyPublisher()
+    }
+    
+    
+    public func fetchNumberFactPayload(
+        at endpoint: Endpoint
+    ) -> AnyPublisher<NumberFactPayload, NumbersAPIServiceError> {
         guard let url = endpoint.url else {
             preconditionFailure("Unable to make url for endpoint")
         }
@@ -69,12 +76,17 @@ extension NumbersAPIServicing {
                 else {
                     throw NumbersAPIServiceError.parsing(response: httpResponse, data: data)
                 }
-                
-                return NumberFact(
+  
+                return (
+                    text: numberFactText,
                     number: number,
-                    category: numberFactCategory,
-                    text: numberFactText
+                    category: numberFactCategory
                 )
+//                return NumberFact(
+//                    number: number,
+//                    category: numberFactCategory,
+//                    text: numberFactText
+//                )
             }
             .mapError { error in
                 if let error = error as? NumbersAPIServiceError {
@@ -89,31 +101,20 @@ extension NumbersAPIServicing {
     }
     
     
-    public func fetchRandomYearFact(
-        using decoder: JSONDecoder = NumberFact.Decoder.default
-    ) -> AnyPublisher<NumberFact, NumbersAPIServiceError> {
-        fetchNumberFact(at: Endpoint.NumbersAPI.randomYearFact, using: decoder)
+    public func fetchRandomYearFactPayload() -> AnyPublisher<NumberFactPayload, NumbersAPIServiceError> {
+        fetchNumberFactPayload(at: Endpoint.NumbersAPI.randomYearFact)
     }
     
-    
-    public func fetchRandomDateFact(
-        using decoder: JSONDecoder = NumberFact.Decoder.default
-    ) -> AnyPublisher<NumberFact, NumbersAPIServiceError> {
-        fetchNumberFact(at: Endpoint.NumbersAPI.randomDateFact, using: decoder)
+    public func fetchRandomDateFactPayload() -> AnyPublisher<NumberFactPayload, NumbersAPIServiceError> {
+        fetchNumberFactPayload(at: Endpoint.NumbersAPI.randomDateFact)
     }
     
-    
-    public func fetchRandomNumberTrivia(
-        using decoder: JSONDecoder = NumberFact.Decoder.default
-    ) -> AnyPublisher<NumberFact, NumbersAPIServiceError> {
-        fetchNumberFact(at: Endpoint.NumbersAPI.randomTriviaFact, using: decoder)
+    public func fetchRandomNumberTriviaPayload() -> AnyPublisher<NumberFactPayload, NumbersAPIServiceError> {
+        fetchNumberFactPayload(at: Endpoint.NumbersAPI.randomTriviaFact)
     }
     
-    
-    public func fetchRandomMathFact(
-        using decoder: JSONDecoder = NumberFact.Decoder.default
-    ) -> AnyPublisher<NumberFact, NumbersAPIServiceError> {
-        fetchNumberFact(at: Endpoint.NumbersAPI.randomMathFact, using: decoder)
+    public func fetchRandomMathFactPayload() -> AnyPublisher<NumberFactPayload, NumbersAPIServiceError> {
+        fetchNumberFactPayload(at: Endpoint.NumbersAPI.randomMathFact)
     }
 }
 

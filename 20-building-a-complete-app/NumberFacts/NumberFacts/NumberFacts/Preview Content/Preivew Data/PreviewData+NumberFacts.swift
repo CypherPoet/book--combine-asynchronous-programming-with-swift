@@ -15,14 +15,18 @@ extension PreviewData {
     enum NumberFacts {
         
         static let sample1: NumberFact = {
-            NumberFact(
-                number: 22,
-                category: .math,
-                text: "408 is the 8^{th} Pell number.",
-                currentLanguage: .english,
-                translationLanguage: .spanish,
-                translatedText: nil
-            )
+            let context = CurrentApp.coreDataManager.mainContext
+            let numberFact = NumberFact(context: context)
+                
+            numberFact.number = 22
+            numberFact.category = .math
+            numberFact.text = "408 is the 8^{th} Pell number."
+            numberFact.currentLanguage = .english
+            numberFact.translationLanguage = .spanish
+            numberFact.translatedText =  nil
+            numberFact.isFavorite = false
+            
+            return numberFact
         }()
     }
 }

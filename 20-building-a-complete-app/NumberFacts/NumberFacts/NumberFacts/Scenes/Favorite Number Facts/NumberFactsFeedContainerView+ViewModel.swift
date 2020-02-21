@@ -92,9 +92,22 @@ extension NumberFactsFeedContainerView.ViewModel {
         self.dataFetchingState = .fetching
         
         numbersAPIService
-            .fetchRandomMathFact()  // TODO: Enable category selection?
+            .fetchRandomMathFactPayload()  // TODO: Enable category selection?
             .retry(1)
-            .replaceError(with: NumberFact.errorFact)
+            .replaceError(with: NumberFact.errorFactPayload)
+            .flatMap { [unowned self] payload in
+                self.numbersAPIService.numberFact(
+                    fromPayload: payload,
+                    in: CurrentApp.coreDataManager.backgroundContext
+                )
+            }
+            .map { numberFact in
+                guard let context = numberFact.managedObjectContext else { preconditionFailure() }
+                
+                _ = CurrentApp.coreDataManager.save(context)
+                
+                return numberFact
+            }
             .receive(on: DispatchQueue.main)
 //            .handleEvents(
 //                receiveOutput: { numberFact in
@@ -136,9 +149,9 @@ private extension NumberFactsFeedContainerView.ViewModel {
 //            let currentNumberFact = currentNumberFact,
 //            let context = currentNumberFact.managedObjectContext
 //        else { preconditionFailure() }
-//        
+//
 //        currentNumberFact.translatedText = translationText
-//        
+//
 //        CurrentApp.coreDataManager.save(context)
     }
 }

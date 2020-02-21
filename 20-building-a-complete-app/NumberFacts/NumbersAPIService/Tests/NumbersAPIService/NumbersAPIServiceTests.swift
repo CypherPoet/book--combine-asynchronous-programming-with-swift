@@ -29,13 +29,13 @@ final class MockNumbersAPIService {
 
 extension MockNumbersAPIService: NumbersAPIServicing {
    
-    func fetchRandomYearFact(
-        using decoder: JSONDecoder = NumberFact.Decoder.default
-    ) -> AnyPublisher<NumberFact, NumbersAPIServiceError> {
+    func fetchRandomYearFactPayload()
+        -> AnyPublisher<NumberFactPayload, NumbersAPIServiceError>
+    {
         if let error = error {
-            return Fail(outputType: NumberFact.self, failure: error).eraseToAnyPublisher()
+            return Fail(outputType: NumberFactPayload.self, failure: error).eraseToAnyPublisher()
         } else {
-            return fetchNumberFact(at: Endpoint.NumbersAPI.randomYearFact, using: decoder)
+            return fetchNumberFactPayload(at: Endpoint.NumbersAPI.randomYearFact)
         }
     }
 }
@@ -49,11 +49,11 @@ final class NumbersAPIServiceTests: XCTestCase {
 
 extension NumbersAPIServiceTests {
     
-    func testFetchRandomYearFact() {
+    func testFetchRandomYearFactPayload() {
         let expectation = XCTestExpectation(description: "Fetch random year fact")
 
         apiService
-            .fetchRandomYearFact()
+            .fetchRandomYearFactPayload()
             .sink(
                 receiveCompletion: { completion in
                     print("testFetchRandomYearFact :: sink :: Received completion: \(completion)")
@@ -64,9 +64,9 @@ extension NumbersAPIServiceTests {
                         XCTFail()
                     }
                 },
-                receiveValue: { numberFact in
-                    print("testFetchRandomYearFact :: sink :: Received value: \(numberFact)")
-                    XCTAssertEqual(numberFact.category, .year)
+                receiveValue: { numberFactPayload in
+                    print("testFetchRandomYearFact :: sink :: Received value: \(numberFactPayload)")
+                    XCTAssertEqual(numberFactPayload.category, .year)
                 }
             )
             .store(in: &subscriptions)

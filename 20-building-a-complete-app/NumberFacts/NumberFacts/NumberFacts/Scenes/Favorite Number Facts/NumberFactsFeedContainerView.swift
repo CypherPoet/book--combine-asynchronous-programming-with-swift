@@ -35,8 +35,7 @@ extension NumberFactsFeedContainerView: View {
                 } else if viewModel.currentNumberFact != nil {
                     NumberFactCardView(
                         viewModel: .init(
-                            numberFact: viewModel.currentNumberFact!,
-                            language: viewModel.currentLanguage
+                            numberFact: viewModel.currentNumberFact!
                         ),
                         onFactLiked: self.factLiked(_:),
                         onFactDisliked: self.factDisliked(_:)

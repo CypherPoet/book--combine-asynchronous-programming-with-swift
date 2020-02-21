@@ -13,16 +13,20 @@ import Common
 
 
 extension NumberFactCardView {
-//    final class ViewModel: ObservableObject {
-    struct ViewModel {
+    final class ViewModel: ObservableObject {
 //        private var subscriptions = Set<AnyCancellable>()
-
-
-//         MARK: - Published Outputs
-//        @Published var someValue: String = ""
         
-        var numberFact: NumberFact
-        var language: Language
+        private let numberFact: NumberFact
+
+        
+        // MARK: - Published Outputs
+        @Published var isShowingTranslation = false
+        
+        
+        // MARK: - Init
+        init(numberFact: NumberFact) {
+            self.numberFact = numberFact
+        }
     }
 }
 
@@ -38,6 +42,10 @@ extension NumberFactCardView.ViewModel {
 
 // MARK: - Computeds
 extension NumberFactCardView.ViewModel {
+    
+    var numberFactText: String {
+        isShowingTranslation ? (numberFact.translatedText ?? "No translation available.") : numberFact.text
+    }
 }
 
 
