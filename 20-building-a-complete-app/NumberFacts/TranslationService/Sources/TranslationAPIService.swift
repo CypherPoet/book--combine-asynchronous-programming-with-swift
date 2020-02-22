@@ -2,13 +2,13 @@ import Foundation
 import CypherPoetNetStack
 
 
-public final class NumbersAPIService {
+public final class TranslationAPIService {
     public var session: URLSession
     public var apiQueue: DispatchQueue
     
     public init(
         session: URLSession = .shared,
-        queue: DispatchQueue = DispatchQueue(label: "NumbersAPIService", qos: .userInitiated)
+        queue: DispatchQueue = DispatchQueue(label: "TranslationAPIService", qos: .userInitiated)
     ) {
         self.session = session
         self.apiQueue = queue
@@ -16,4 +16,4 @@ public final class NumbersAPIService {
 }
 
 
-extension NumbersAPIService: NumbersAPIServicing {}
+extension TranslationAPIService: TranslationAPIServicing {}

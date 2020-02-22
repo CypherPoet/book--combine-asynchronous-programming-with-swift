@@ -56,7 +56,6 @@ extension NumbersAPIServiceTests {
             .fetchRandomYearFactPayload()
             .sink(
                 receiveCompletion: { completion in
-                    print("testFetchRandomYearFact :: sink :: Received completion: \(completion)")
                     switch completion {
                     case .finished:
                         expectation.fulfill()

@@ -18,6 +18,8 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         .package(path: "../Common"),
+
+        .package(url: "https://github.com/CypherPoet/CypherPoetNetStack.git", from: "0.0.28"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -25,13 +27,19 @@ let package = Package(
         .target(
             name: "TranslationService",
             dependencies: [
-                "Common"
-            ]
+                "Common",
+                "CypherPoetNetStack",
+            ],
+            path: "Sources/"
         ),
         
         
         .testTarget(
             name: "TranslationServiceTests",
-            dependencies: ["TranslationService"]),
+            dependencies: [
+                "TranslationService"
+            ],
+            path: "Tests/TranslationService"
+        ),
     ]
 )

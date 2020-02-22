@@ -28,6 +28,7 @@
 		F38DABA423FC5DCD00A8E1F6 /* CypherPoetSwiftUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = F38DABA323FC5DCD00A8E1F6 /* CypherPoetSwiftUIKit */; };
 		F38DABA623FC5DF300A8E1F6 /* CoreDataManager+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38DABA523FC5DF300A8E1F6 /* CoreDataManager+Utils.swift */; };
 		F38DABA923FC5E1E00A8E1F6 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38DABA823FC5E1E00A8E1F6 /* AppState.swift */; };
+		F398E8B12401E9A700A07EE2 /* TranslationService in Frameworks */ = {isa = PBXBuildFile; productRef = F398E8B02401E9A700A07EE2 /* TranslationService */; };
 		F3B323C323FF567A0005E6FC /* NumberFactCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B323C223FF567A0005E6FC /* NumberFactCardView.swift */; };
 		F3B323C523FF568F0005E6FC /* NumberFactCardView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B323C423FF568F0005E6FC /* NumberFactCardView+ViewModel.swift */; };
 		F3B323C723FF57F10005E6FC /* PreviewData+NumberFacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B323C623FF57F10005E6FC /* PreviewData+NumberFacts.swift */; };
@@ -78,6 +79,7 @@
 			files = (
 				F321F7DD23F79B530059D5E9 /* NumbersAPIService in Frameworks */,
 				F38DABA423FC5DCD00A8E1F6 /* CypherPoetSwiftUIKit in Frameworks */,
+				F398E8B12401E9A700A07EE2 /* TranslationService in Frameworks */,
 				F38DABA123FC5DA900A8E1F6 /* CypherPoetCoreDataKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +273,7 @@
 				F321F7DC23F79B530059D5E9 /* NumbersAPIService */,
 				F38DABA023FC5DA900A8E1F6 /* CypherPoetCoreDataKit */,
 				F38DABA323FC5DCD00A8E1F6 /* CypherPoetSwiftUIKit */,
+				F398E8B02401E9A700A07EE2 /* TranslationService */,
 			);
 			productName = NumberFacts;
 			productReference = F321F7B323F79A770059D5E9 /* NumberFacts.app */;
@@ -674,6 +677,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F38DABA223FC5DCD00A8E1F6 /* XCRemoteSwiftPackageReference "CypherPoetSwiftUIKit" */;
 			productName = CypherPoetSwiftUIKit;
+		};
+		F398E8B02401E9A700A07EE2 /* TranslationService */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TranslationService;
 		};
 /* End XCSwiftPackageProductDependency section */
 

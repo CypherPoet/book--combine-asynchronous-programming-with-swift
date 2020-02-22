@@ -1,16 +1,9 @@
-//
-//  File.swift
-//  
-//
-//  Created by Brian Sipple on 2/20/20.
-//
-
 import Foundation
-
 
 
 public enum Language: String {
     case english
+    case french
     case spanish
 }
 
@@ -37,9 +30,11 @@ extension Language {
     public var shortName: String {
         switch self {
         case .english:
-            return "Eng."
+            return "EN"
         case .spanish:
-            return "Esp."
+            return "ES"
+        case .french:
+            return "FR"
         }
     }
     
@@ -50,6 +45,8 @@ extension Language {
             return "English"
         case .spanish:
             return "Spanish"
+        case .french:
+            return "French"
         }
     }
 
@@ -60,6 +57,8 @@ extension Language {
             return "en"
         case .spanish:
             return "es"
+        case .french:
+            return "fr"
         }
     }
 }

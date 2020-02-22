@@ -22,7 +22,7 @@ extension PreviewData {
             numberFact.category = .math
             numberFact.text = "408 is the 8^{th} Pell number."
             numberFact.currentLanguage = .english
-            numberFact.translationLanguage = .spanish
+            numberFact.translationLanguage = .french
             numberFact.translatedText =  nil
             numberFact.isFavorite = false
             

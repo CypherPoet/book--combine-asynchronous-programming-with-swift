@@ -11,6 +11,7 @@ import SwiftUI
 import Combine
 import Common
 import NumbersAPIService
+import TranslationService
 
 
 extension NumberFactsFeedContainerView {
@@ -20,6 +21,7 @@ extension NumberFactsFeedContainerView {
 
         
         private let numbersAPIService: NumbersAPIServicing
+        private let translationAPIService: TranslationAPIServicing
         
             
         // MARK: - Published Outputs
@@ -30,9 +32,11 @@ extension NumberFactsFeedContainerView {
 
         // MARK: - Init
         init(
-            numbersAPIService: NumbersAPIServicing = NumbersAPIService()
+            numbersAPIService: NumbersAPIServicing = NumbersAPIService(),
+            translationAPIService: TranslationAPIServicing = TranslationAPIService()
         ) {
             self.numbersAPIService = numbersAPIService
+            self.translationAPIService = translationAPIService
             
             setupSubscribers()
         }
@@ -63,9 +67,13 @@ extension NumberFactsFeedContainerView.ViewModel {
     private var translationTextPublisher: AnyPublisher<String, Never> {
         numberFactPublisher
             .compactMap { $0 }
-//            .print("dataFetchingStatePublisher")
-            .flatMap { numberFact -> AnyPublisher<String, Never> in
-                return Just("Translated numberFact text").eraseToAnyPublisher()
+            .flatMap { numberFact in
+                self.translationAPIService.fetchTranslationText(
+                    for: numberFact.text,
+                    convertingFrom: numberFact.currentLanguage,
+                    to: numberFact.translationLanguage
+                )
+                .replaceError(with: "No Translation Available")
             }
             .eraseToAnyPublisher()
     }
@@ -76,12 +84,6 @@ extension NumberFactsFeedContainerView.ViewModel {
 extension NumberFactsFeedContainerView.ViewModel {
     
     var isFetching: Bool { dataFetchingState == .fetching }
-    
-//    var currentNumberFact: NumberFact? {
-//        guard case let .fetched(numberFact) = dataFetchingState else { return nil }
-//
-//        return numberFact
-//    }
 }
 
 
@@ -103,6 +105,9 @@ extension NumberFactsFeedContainerView.ViewModel {
             }
             .map { numberFact in
                 guard let context = numberFact.managedObjectContext else { preconditionFailure() }
+                
+                numberFact.currentLanguage = CurrentApp.defaultLanguage
+                numberFact.translationLanguage = .french
                 
                 _ = CurrentApp.coreDataManager.save(context)
                 
@@ -145,14 +150,14 @@ private extension NumberFactsFeedContainerView.ViewModel {
     
     
     func updateNumberFact(withTranslation translationText: String) {
-//        guard
-//            let currentNumberFact = currentNumberFact,
-//            let context = currentNumberFact.managedObjectContext
-//        else { preconditionFailure() }
-//
-//        currentNumberFact.translatedText = translationText
-//
-//        CurrentApp.coreDataManager.save(context)
+        guard
+            let currentNumberFact = currentNumberFact,
+            let context = currentNumberFact.managedObjectContext
+        else { preconditionFailure() }
+
+        currentNumberFact.translatedText = translationText
+
+        CurrentApp.coreDataManager.save(context)
     }
 }
 
