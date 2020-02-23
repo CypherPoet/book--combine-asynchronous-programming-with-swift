@@ -16,12 +16,12 @@ extension NumberFactCardView {
     final class ViewModel: ObservableObject {
 //        private var subscriptions = Set<AnyCancellable>()
         
-        private let numberFact: NumberFact
+        let numberFact: NumberFact
 
         
         // MARK: - Published Outputs
         @Published var isShowingTranslation = false
-        
+        @Published var decisionState: DecisionState = .undecided
         
         // MARK: - Init
         init(numberFact: NumberFact) {
@@ -64,4 +64,14 @@ private extension NumberFactCardView.ViewModel {
 //            .assign(to: \.someValue, on: self)
 //            .store(in: &subscriptions)
 //    }
+}
+
+
+// MARK: - Decision State
+extension NumberFactCardView.ViewModel {
+    enum DecisionState {
+        case liked
+        case disliked
+        case undecided
+    }
 }
