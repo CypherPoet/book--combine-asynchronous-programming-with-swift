@@ -139,15 +139,28 @@ extension NumberFactCardView {
                 
                 switch finalDragValue.predictedEndLocation.x {
                 case (frameWidth - (cardWidth * 0.5))...:
-                    self.onFactLiked(self.viewModel.numberFact)
-                    self.viewModel.decisionState = .liked
+                    self.handle(decision: .liked)
                 case ...(cardWidth * -0.5):
-                    self.onFactDisliked(self.viewModel.numberFact)
-                    self.viewModel.decisionState = .disliked
+                    self.handle(decision: .disliked)
                 default:
                     break
                 }
             }
+    }
+    
+    
+    func handle(decision newDecisionState: ViewModel.DecisionState) {
+        guard newDecisionState != .undecided else { preconditionFailure() }
+        
+        self.viewModel.decisionState = newDecisionState
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            if case .liked = newDecisionState {
+                self.onFactLiked(self.viewModel.numberFact)
+            } else {
+                self.onFactDisliked(self.viewModel.numberFact)
+            }
+        }
     }
 }
 

@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/CypherPoet/CypherPoetCoreDataKit.git",
         "state": {
           "branch": null,
-          "revision": "4c02f3fa248d3b6c606a77f2f6c7c54eafb53bca",
-          "version": "0.0.8"
+          "revision": "19e26a32e1cde119c41ceb50a59159fa94c5e1ae",
+          "version": "0.0.11"
         }
       },
       {
@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/CypherPoet/CypherPoetSwiftUIKit.git",
         "state": {
           "branch": null,
-          "revision": "371baaf215e956a259b7d34489ae13fcbc67543e",
-          "version": "0.0.38"
+          "revision": "ae3c4bf2c35bd329ba0b6c185ad3938d92b41bfe",
+          "version": "0.0.41"
         }
       }
     ]

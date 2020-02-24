@@ -1,11 +1,3 @@
-//
-//  NumberFact+CoreDataClass.swift
-//  
-//
-//  Created by Brian Sipple on 2/21/20.
-//
-//
-
 import Foundation
 import CoreData
 
@@ -13,3 +5,5 @@ import CoreData
 public class NumberFact: NSManagedObject {
     
 }
+
+extension NumberFact: Identifiable {}

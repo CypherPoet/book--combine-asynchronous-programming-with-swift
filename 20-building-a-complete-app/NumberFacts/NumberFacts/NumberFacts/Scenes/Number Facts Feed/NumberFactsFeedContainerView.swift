@@ -9,6 +9,7 @@
 import SwiftUI
 import Combine
 import Common
+import CypherPoetSwiftUIKit
 
 
 struct NumberFactsFeedContainerView {
@@ -31,7 +32,7 @@ extension NumberFactsFeedContainerView: View {
         NavigationView {
             Group {
                 if viewModel.isFetching {
-                    Text("Spinner")
+                    UIActivityIndicatorWrapper()
                 } else if viewModel.currentNumberFact != nil {
                     NumberFactCardView(
                         viewModel: .init(
@@ -69,12 +70,13 @@ extension NumberFactsFeedContainerView {
 private extension NumberFactsFeedContainerView {
     
     func factLiked(_ fact: NumberFact) {
-        
+        viewModel.updateFavoriteStatus(for: fact, to: true)
+        viewModel.fetchNumberCard()
     }
     
-    
     func factDisliked(_ fact: NumberFact) {
-        
+        viewModel.updateFavoriteStatus(for: fact, to: false)
+        viewModel.fetchNumberCard()
     }
 }
 

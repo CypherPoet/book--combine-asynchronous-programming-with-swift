@@ -24,7 +24,7 @@ extension PreviewData {
             numberFact.currentLanguage = .english
             numberFact.translationLanguage = .french
             numberFact.translatedText =  nil
-            numberFact.isFavorite = false
+            numberFact.isFavorite = true
             
             return numberFact
         }()

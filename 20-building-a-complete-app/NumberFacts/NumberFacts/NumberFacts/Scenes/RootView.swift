@@ -10,6 +10,7 @@ import SwiftUI
 
 
 struct RootView {
+    @Environment(\.managedObjectContext) private var managedObjectContext
     @EnvironmentObject var store: AppStore
 }
 
@@ -45,5 +46,6 @@ struct RootView_Previews: PreviewProvider {
     static var previews: some View {
         RootView()
             .environmentObject(PreviewData.AppStores.default)
+            .environment(\.managedObjectContext, CurrentApp.coreDataManager.mainContext)
     }
 }

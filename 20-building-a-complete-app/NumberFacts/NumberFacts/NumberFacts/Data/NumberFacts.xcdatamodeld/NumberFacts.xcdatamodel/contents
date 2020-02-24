@@ -8,6 +8,13 @@
         <attribute name="text" attributeType="String"/>
         <attribute name="translatedText" optional="YES" attributeType="String"/>
         <attribute name="translationLanguageValue" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="number"/>
+                <constraint value="categoryValue"/>
+                <constraint value="text"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <elements>
         <element name="NumberFact" positionX="-63" positionY="-18" width="128" height="148"/>

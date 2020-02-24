@@ -90,6 +90,15 @@ extension NumberFactsFeedContainerView.ViewModel {
 // MARK: - Public Methods
 extension NumberFactsFeedContainerView.ViewModel {
     
+    func updateFavoriteStatus(for numberFact: NumberFact, to isFavorite: Bool) {
+        guard let context = numberFact.managedObjectContext else { preconditionFailure() }
+    
+        numberFact.isFavorite = isFavorite
+        
+        _ = CurrentApp.coreDataManager.save(context)
+    }
+    
+    
     func fetchNumberCard() {
         self.dataFetchingState = .fetching
         

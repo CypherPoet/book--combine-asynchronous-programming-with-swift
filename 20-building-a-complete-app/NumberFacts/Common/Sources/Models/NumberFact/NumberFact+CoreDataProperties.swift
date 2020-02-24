@@ -3,11 +3,6 @@ import CoreData
 
 
 extension NumberFact {
-
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<NumberFact> {
-        return NSFetchRequest<NumberFact>(entityName: "NumberFact")
-    }
-
     @NSManaged public var number: Int64
     @NSManaged public var categoryValue: String
     @NSManaged public var text: String

@@ -13,6 +13,10 @@
 		F30194D823FDC78100B295EF /* PreviewData+AppStores.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30194D723FDC78100B295EF /* PreviewData+AppStores.swift */; };
 		F30194DC23FDCAC300B295EF /* NumberFactsFeedContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30194DB23FDCAC300B295EF /* NumberFactsFeedContainerView.swift */; };
 		F30194DE23FDCC1700B295EF /* NumberFactsFeedContainerView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30194DD23FDCC1700B295EF /* NumberFactsFeedContainerView+ViewModel.swift */; };
+		F31C5AB924030B3C00F4B529 /* CypherPoetSwiftUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = F31C5AB824030B3C00F4B529 /* CypherPoetSwiftUIKit */; };
+		F31C5ABB2403394C00F4B529 /* FavoriteNumberFactsContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31C5ABA2403394C00F4B529 /* FavoriteNumberFactsContainerView.swift */; };
+		F31C5ABD24033EBB00F4B529 /* FavoriteNumberFactsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31C5ABC24033EBB00F4B529 /* FavoriteNumberFactsListView.swift */; };
+		F31C5ABF24033EDD00F4B529 /* FavoriteNumberFactsContainerView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31C5ABE24033EDD00F4B529 /* FavoriteNumberFactsContainerView+ViewModel.swift */; };
 		F321F7B723F79A770059D5E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F321F7B623F79A770059D5E9 /* AppDelegate.swift */; };
 		F321F7B923F79A770059D5E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F321F7B823F79A770059D5E9 /* SceneDelegate.swift */; };
 		F321F7BC23F79A770059D5E9 /* NumberFacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F321F7BA23F79A770059D5E9 /* NumberFacts.xcdatamodeld */; };
@@ -21,11 +25,11 @@
 		F321F7D123F79A7A0059D5E9 /* NumberFactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F321F7D023F79A7A0059D5E9 /* NumberFactsTests.swift */; };
 		F321F7DD23F79B530059D5E9 /* NumbersAPIService in Frameworks */ = {isa = PBXBuildFile; productRef = F321F7DC23F79B530059D5E9 /* NumbersAPIService */; };
 		F324FBBD2400121200201F64 /* NumberFact+errorFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F324FBBC2400121200201F64 /* NumberFact+errorFact.swift */; };
+		F374D67224047A54003C664F /* Collection+deleteManagedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = F374D67124047A54003C664F /* Collection+deleteManagedObjects.swift */; };
 		F38DAB9A23FC5C3100A8E1F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F38DAB9823FC5C3100A8E1F6 /* LaunchScreen.storyboard */; };
 		F38DAB9C23FC5C7400A8E1F6 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38DAB9B23FC5C7400A8E1F6 /* RootView.swift */; };
 		F38DAB9E23FC5D7700A8E1F6 /* CurrentApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38DAB9D23FC5D7700A8E1F6 /* CurrentApplication.swift */; };
 		F38DABA123FC5DA900A8E1F6 /* CypherPoetCoreDataKit in Frameworks */ = {isa = PBXBuildFile; productRef = F38DABA023FC5DA900A8E1F6 /* CypherPoetCoreDataKit */; };
-		F38DABA423FC5DCD00A8E1F6 /* CypherPoetSwiftUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = F38DABA323FC5DCD00A8E1F6 /* CypherPoetSwiftUIKit */; };
 		F38DABA623FC5DF300A8E1F6 /* CoreDataManager+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38DABA523FC5DF300A8E1F6 /* CoreDataManager+Utils.swift */; };
 		F38DABA923FC5E1E00A8E1F6 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38DABA823FC5E1E00A8E1F6 /* AppState.swift */; };
 		F398E8B12401E9A700A07EE2 /* TranslationService in Frameworks */ = {isa = PBXBuildFile; productRef = F398E8B02401E9A700A07EE2 /* TranslationService */; };
@@ -51,6 +55,9 @@
 		F30194D723FDC78100B295EF /* PreviewData+AppStores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviewData+AppStores.swift"; sourceTree = "<group>"; };
 		F30194DB23FDCAC300B295EF /* NumberFactsFeedContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactsFeedContainerView.swift; sourceTree = "<group>"; };
 		F30194DD23FDCC1700B295EF /* NumberFactsFeedContainerView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFactsFeedContainerView+ViewModel.swift"; sourceTree = "<group>"; };
+		F31C5ABA2403394C00F4B529 /* FavoriteNumberFactsContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteNumberFactsContainerView.swift; sourceTree = "<group>"; };
+		F31C5ABC24033EBB00F4B529 /* FavoriteNumberFactsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteNumberFactsListView.swift; sourceTree = "<group>"; };
+		F31C5ABE24033EDD00F4B529 /* FavoriteNumberFactsContainerView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoriteNumberFactsContainerView+ViewModel.swift"; sourceTree = "<group>"; };
 		F321F7B323F79A770059D5E9 /* NumberFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F321F7B623F79A770059D5E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F321F7B823F79A770059D5E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +69,7 @@
 		F321F7D023F79A7A0059D5E9 /* NumberFactsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactsTests.swift; sourceTree = "<group>"; };
 		F321F7D223F79A7A0059D5E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F324FBBC2400121200201F64 /* NumberFact+errorFact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFact+errorFact.swift"; sourceTree = "<group>"; };
+		F374D67124047A54003C664F /* Collection+deleteManagedObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+deleteManagedObjects.swift"; sourceTree = "<group>"; };
 		F38DAB9923FC5C3100A8E1F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = NumberFacts/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		F38DAB9B23FC5C7400A8E1F6 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		F38DAB9D23FC5D7700A8E1F6 /* CurrentApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentApplication.swift; sourceTree = "<group>"; };
@@ -78,8 +86,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F321F7DD23F79B530059D5E9 /* NumbersAPIService in Frameworks */,
-				F38DABA423FC5DCD00A8E1F6 /* CypherPoetSwiftUIKit in Frameworks */,
 				F398E8B12401E9A700A07EE2 /* TranslationService in Frameworks */,
+				F31C5AB924030B3C00F4B529 /* CypherPoetSwiftUIKit in Frameworks */,
 				F38DABA123FC5DA900A8E1F6 /* CypherPoetCoreDataKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,14 +112,17 @@
 			path = "Preivew Data";
 			sourceTree = "<group>";
 		};
-		F30194D923FDCAA500B295EF /* Number Facts Feed */ = {
+		F30194D923FDCAA500B295EF /* Favorite Number Facts */ = {
 			isa = PBXGroup;
 			children = (
+				F31C5ABA2403394C00F4B529 /* FavoriteNumberFactsContainerView.swift */,
+				F31C5ABE24033EDD00F4B529 /* FavoriteNumberFactsContainerView+ViewModel.swift */,
+				F31C5ABC24033EBB00F4B529 /* FavoriteNumberFactsListView.swift */,
 			);
-			path = "Number Facts Feed";
+			path = "Favorite Number Facts";
 			sourceTree = "<group>";
 		};
-		F30194DA23FDCAAC00B295EF /* Favorite Number Facts */ = {
+		F30194DA23FDCAAC00B295EF /* Number Facts Feed */ = {
 			isa = PBXGroup;
 			children = (
 				F30194DB23FDCAC300B295EF /* NumberFactsFeedContainerView.swift */,
@@ -119,7 +130,7 @@
 				F3B323C423FF568F0005E6FC /* NumberFactCardView+ViewModel.swift */,
 				F30194DD23FDCC1700B295EF /* NumberFactsFeedContainerView+ViewModel.swift */,
 			);
-			path = "Favorite Number Facts";
+			path = "Number Facts Feed";
 			sourceTree = "<group>";
 		};
 		F321F7AA23F79A770059D5E9 = {
@@ -184,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				F324FBBC2400121200201F64 /* NumberFact+errorFact.swift */,
+				F374D67124047A54003C664F /* Collection+deleteManagedObjects.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -193,8 +205,8 @@
 			children = (
 				F38DAB9B23FC5C7400A8E1F6 /* RootView.swift */,
 				F30194D223FDC4C500B295EF /* HomeView.swift */,
-				F30194DA23FDCAAC00B295EF /* Favorite Number Facts */,
-				F30194D923FDCAA500B295EF /* Number Facts Feed */,
+				F30194DA23FDCAAC00B295EF /* Number Facts Feed */,
+				F30194D923FDCAA500B295EF /* Favorite Number Facts */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -272,8 +284,8 @@
 			packageProductDependencies = (
 				F321F7DC23F79B530059D5E9 /* NumbersAPIService */,
 				F38DABA023FC5DA900A8E1F6 /* CypherPoetCoreDataKit */,
-				F38DABA323FC5DCD00A8E1F6 /* CypherPoetSwiftUIKit */,
 				F398E8B02401E9A700A07EE2 /* TranslationService */,
+				F31C5AB824030B3C00F4B529 /* CypherPoetSwiftUIKit */,
 			);
 			productName = NumberFacts;
 			productReference = F321F7B323F79A770059D5E9 /* NumberFacts.app */;
@@ -366,7 +378,9 @@
 			files = (
 				F30194D623FDC75E00B295EF /* PreviewData.swift in Sources */,
 				F3B323C323FF567A0005E6FC /* NumberFactCardView.swift in Sources */,
+				F31C5ABF24033EDD00F4B529 /* FavoriteNumberFactsContainerView+ViewModel.swift in Sources */,
 				F30194D323FDC4C500B295EF /* HomeView.swift in Sources */,
+				F374D67224047A54003C664F /* Collection+deleteManagedObjects.swift in Sources */,
 				F30194DE23FDCC1700B295EF /* NumberFactsFeedContainerView+ViewModel.swift in Sources */,
 				F38DAB9C23FC5C7400A8E1F6 /* RootView.swift in Sources */,
 				F321F7BC23F79A770059D5E9 /* NumberFacts.xcdatamodeld in Sources */,
@@ -375,10 +389,12 @@
 				F324FBBD2400121200201F64 /* NumberFact+errorFact.swift in Sources */,
 				F321F7B723F79A770059D5E9 /* AppDelegate.swift in Sources */,
 				F3B323C723FF57F10005E6FC /* PreviewData+NumberFacts.swift in Sources */,
+				F31C5ABD24033EBB00F4B529 /* FavoriteNumberFactsListView.swift in Sources */,
 				F30194D123FD178600B295EF /* NumberFactsState.swift in Sources */,
 				F38DAB9E23FC5D7700A8E1F6 /* CurrentApplication.swift in Sources */,
 				F38DABA623FC5DF300A8E1F6 /* CoreDataManager+Utils.swift in Sources */,
 				F30194D823FDC78100B295EF /* PreviewData+AppStores.swift in Sources */,
+				F31C5ABB2403394C00F4B529 /* FavoriteNumberFactsContainerView.swift in Sources */,
 				F321F7B923F79A770059D5E9 /* SceneDelegate.swift in Sources */,
 				F3B323C523FF568F0005E6FC /* NumberFactCardView+ViewModel.swift in Sources */,
 			);
@@ -664,6 +680,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F31C5AB824030B3C00F4B529 /* CypherPoetSwiftUIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F38DABA223FC5DCD00A8E1F6 /* XCRemoteSwiftPackageReference "CypherPoetSwiftUIKit" */;
+			productName = CypherPoetSwiftUIKit;
+		};
 		F321F7DC23F79B530059D5E9 /* NumbersAPIService */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NumbersAPIService;
@@ -672,11 +693,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F38DAB9F23FC5DA900A8E1F6 /* XCRemoteSwiftPackageReference "CypherPoetCoreDataKit" */;
 			productName = CypherPoetCoreDataKit;
-		};
-		F38DABA323FC5DCD00A8E1F6 /* CypherPoetSwiftUIKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F38DABA223FC5DCD00A8E1F6 /* XCRemoteSwiftPackageReference "CypherPoetSwiftUIKit" */;
-			productName = CypherPoetSwiftUIKit;
 		};
 		F398E8B02401E9A700A07EE2 /* TranslationService */ = {
 			isa = XCSwiftPackageProductDependency;

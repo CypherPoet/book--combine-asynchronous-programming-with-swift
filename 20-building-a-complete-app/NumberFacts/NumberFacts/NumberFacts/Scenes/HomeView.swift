@@ -25,10 +25,7 @@ extension HomeView: View {
 
     var body: some View {
         TabView(selection: $activeTab) {
-//            FavoriteNumberFactsContainerView()
-            
             NumberFactsFeedContainerView()
-//            Text("Favorites")
                 .tabItem {
                     Image(systemName: "number.circle.fill")
                     Text("Feed")
@@ -36,12 +33,12 @@ extension HomeView: View {
                 .tag(Tab.numberFactsFeed)
             
             
-            Text("Favorites")
+            FavoriteNumberFactsContainerView()
                 .tabItem {
                     Image(systemName: "star.fill")
                     Text("Favorites")
                 }
-                .tag(Tab.numberFactsFeed)
+                .tag(Tab.favoriteNumberFacts)
         }
     }
 }
